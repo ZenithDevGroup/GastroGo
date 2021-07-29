@@ -1,60 +1,80 @@
 <template>
-  <!-- <div class="customRow">
-            <div class="imgContainer">
-              <img
-                src="~/assets/images/henry-perks-BJXAxQ1L7dI-unsplash.jpg"
-                alt="Skytsunami"
-              />
-            </div>
-            <div class="col">
-              <h3>Push Notif</h3>
-              <p>Some description</p>
-            </div>
-          </div> -->
-  <v-card class="mx-auto my-12 customCard" max-width="374">
+  <div
+    class="customCard"
+    
+  >
     <div class="imgContainer">
       <img src="https://cdn.vuetifyjs.com/images/cards/cooking.png" alt="" />
     </div>
-    <v-card-text>
+    <div>
       <div class="textContainer">
-        <h3
-          class="headline pink--text text--accent-2 text-center"
-          style="text-align: center"
-        >
-          Superdry
-        </h3>
-        Small plates, salads & sandwiches - an intimate setting with 12 indoor
-        seats plus patio seating.
+        <h3 class="headline pink--text text--accent-2 text-center">Superdry</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </div>
-    </v-card-text>
-  </v-card>
+    </div>
+  </div>
 </template>
+<script>
+import aosMixin from "~/mixins/aos";
+export default {
+  mixins: [aosMixin],
+};
+</script>
 <style lang="scss" scoped>
-// .customRow {
-//   margin-left: 20px;
-//   display: grid;
-//   justify-content: start;
-//   text-align: left;
-//   grid-template-columns: 1fr 3fr;
-// }
 .customCard {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
   border-radius: 12px;
-  .textContainer{
-    padding: 20px;
-
-    h3{
-      padding: 10px 0;
+  .textContainer {
+    h3 {
+      padding: 10px;
     }
-  }
-  img {
-    margin-top: 30px;
+    p {
+      color: rgb(68, 68, 68);
+      font-size: 12px;
+      padding: 10px 30px;
+      flex-wrap: wrap;
+    }
   }
 }
 .imgContainer {
+  text-align: center;
+  padding: 20px;
   img {
-    width: 20% !important;
-    height: auto;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .customCard {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-content: center;
+    text-align: left !important;
+
+    .textContainer {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h3 {
+      padding: 0 10px !important;
+    }
+    p {
+      padding: 0 10px !important;
+    }
   }
 }
 </style>

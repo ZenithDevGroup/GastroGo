@@ -1,28 +1,19 @@
 <template>
   <div class="MainContainer">
     <div></div>
-    <div class="content">
-      <TitleComponent :title="title" :description="description" />
-      <!-- 
-      <div class="customRow">
-        <div>
-          <h3>What You Get With Your Content Marketing Startups</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div>
-          <v-btn>GET STARTED</v-btn> 
-        </div>
-      </div> -->
-      <div class="feature">
-        <div class="customCol">
-          <div v-for="i in 3" :key="i">
-            <CustomRowComponent />
-          </div>
+
+    <div class="content" data-aos="fade-right">
+      <div class="title">
+        <h3>Features</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod
+          tempor incididunt ut labore et.
+        </p>
+      </div>
+
+      <div class="customCol">
+        <div v-for="i in 3" :key="i">
+          <CustomRowComponent />
         </div>
       </div>
     </div>
@@ -30,6 +21,7 @@
   </div>
 </template>
 <script>
+import aosMixin from "~/mixins/aos";
 export default {
   data() {
     return {
@@ -38,65 +30,114 @@ export default {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.",
     };
   },
+  mixins: [aosMixin],
 };
 </script>
 <style lang="scss" scoped>
 .MainContainer {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
+  .title {
+    display: grid;
+    justify-content: start;
+    text-align: left;
+
+    h3 {
+      padding-bottom: 10px;
+      color: rgb(202, 11, 53);
+    }
+    p {
+      font-size: clamp(1rem, 5vw, 2rem);
+      color: rgb(68, 68, 68);
+      max-width: 500px;
+      word-wrap: break-word;
+    }
+  }
   .content {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
     justify-content: center;
-    text-align: center;
+    text-align: left;
+    padding: 60px 0;
 
-    .customRow {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-content: space-between;
-
-      div {
-        text-align: left;
-        justify-self: center;
-        p {
-          padding-top: 20px;
-          color: grey;
-          font-size: 12px;
-        }
-      }
+    .imgContainer {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-image: url("~/assets/images/henry-perks-BJXAxQ1L7dI-unsplash.jpg");
     }
 
-    .feature {
-      display: grid;
+    .customCol {
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      row-gap: 60px;
 
-      flex-direction: rows;
-      gap: 100px;
-      padding: 60px 0;
-      justify-content: space-between;
-
-      .imgContainer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        background-size: cover;
-        background-image: url("~/assets/images/henry-perks-BJXAxQ1L7dI-unsplash.jpg");
+      div {
+        justify-self: center;
       }
+    }
+  }
+}
 
+@media only screen and (max-width: 1366px) {
+  .MainContainer {
+    .content {
+      display: flex !important;
+      flex-direction: column;
+
+      .title {
+        // padding-top: ;
+        justify-content: center !important;
+        text-align: center !important;
+        padding-bottom: 20px;
+
+        // p {
+        //   max-width: 100% !important;
+        // }
+      }
       .customCol {
+        padding-top: 20px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        justify-content: space-between;
-
-        div{
-          justify-self: center;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: flex-start;
+        text-align: left;
+        div {
+          justify-self: flex-start;
         }
       }
     }
   }
-  .title {
-    padding-top: 60px;
+}
+@media only screen and (max-width: 1100px) {
+    .MainContainer {
+    .content {
+      display: flex !important;
+      flex-direction: column;
+
+      .title {
+        // padding-top: ;
+        justify-content: center !important;
+        text-align: center !important;
+        padding-bottom: 20px;
+
+        // p {
+        //   max-width: 100% !important;
+        // }
+      }
+      .customCol {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        div {
+          justify-self: flex-start;
+        }
+      }
+    }
   }
 }
 </style>

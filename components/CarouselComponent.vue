@@ -1,5 +1,12 @@
 <template>
-  <v-carousel dark :show-arrows="false" cycle hide-delimiters>
+  <v-carousel
+    
+    dark
+    :show-arrows="false"
+    cycle
+    hide-delimiters
+    data-aos="fade-left"
+  >
     <v-carousel-item v-for="(item, i) in items" :key="i">
       <div class="questionContainer">
         <h3>{{ item.question }}</h3>
@@ -8,6 +15,8 @@
   </v-carousel>
 </template>
 <script>
+import aosMixin from "~/mixins/aos";
+
 export default {
   data() {
     return {
@@ -23,24 +32,25 @@ export default {
       ],
     };
   },
+  mixins: [aosMixin],
 };
 </script>
 <style lang="scss" scoped>
 .questionContainer {
   height: 100%;
-  background-size: cover;
+  width: 100%;
   background-color: #fafafa;
   display: flex;
+  flex-wrap: wrap;
 
   h3 {
     font-weight: 700;
     font-family: "Helvetica Neue";
-    font-size: 56px;
+    font-size: clamp(1rem, 5vw, 2rem);
     margin: auto;
+    padding: 0 20px;
   }
 }
-img {
-  width: 175px;
-  height: 175px;
-}
+
+
 </style>

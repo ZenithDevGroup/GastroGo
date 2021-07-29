@@ -1,93 +1,82 @@
 
 <template>
- <div class="outer">
-   <div class="imgContainer">
-     
-   </div>
-      <div class="MainContainer">
+  <div class="MainContainer">
     <div></div>
-    <div class="col">
-     
-      <div class="center headline-container">
-        <div class="headline-content">
-          <h1>SOME HEADING HERE</h1>
-          <p>
-            Some texts here some text here some text here some text here some
-            text herej jdhfjshdfjdsfdsgkfdgkjdfhgjkfdhgkjdfhkfjdhfd
+    <div class="content">
+      <div class="textContainer">
+        <div>
+          <p style="color: wheat">
+            Our
+            <span style="color: white"><strong>Agency will do</strong></span> it
+            for you.
           </p>
         </div>
-        <GetStartedBtn />
+        <div>
+          <v-btn>Get Started</v-btn>
+        </div>
       </div>
-      <div>
-        <FloatingImage />
-      </div>
+      <!-- <div></div> -->
     </div>
     <div></div>
   </div>
- </div>
 </template>
 
 <style lang="scss" scoped>
-
 .MainContainer {
+  height: 100vh;
+  position: relative;
+  justify-content: center;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  background-image: url("~/assets/images/logo.svg");
-  .col {
-    height: 100vh;
-    display: grid;
-    padding: 0 !important;
+  &::before {
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url("~/assets/images/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg");
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+  }
+  .content {
+    color: black;
+    line-height: 0.9;
+    text-align: center;
+    
+    display: flex;
     align-content: center;
-    justify-self: center;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    .textContainer {
+      position: relative;
+      font-size: clamp(4rem, 5vw, 4rem);
+      margin: auto;
+      color: white;
 
-    .headline-container {
-      padding: 0 !important;
-      display: grid;
-      grid-template-rows: auto;
-      justify-content: space-between;
-      text-align: center;
-    }
-
-    .headline-content {
-      h1 {
-        color: #c76613;
-      }
-      p {
-        color: #535252;
-        line-height: 20px;
-      }
-      p,
-      h1 {
-        padding-top: 40px !important;
+      button {
+        letter-spacing: 2px;
+        font-size: 1rem;
+        width: 50%;
+        padding: 25px 60px;
+        color: wheat;
+        margin: 40px 0;
+        background-color: black;
       }
     }
   }
 }
 
-// span a {
-//   font-size: 18px;
-//   color: #cccccc;
-//   text-decoration: none;
-//   margin: 0 10px;
-//   transition: all 0.4s ease-in-out;
-//   &:hover {
-//     color: #ffffff;
-//   }
-// }
-
-// .getstarted {
-//   display: inline-block;
-//   position: fixed;
-//   bottom: 10px;
-//   left: 10px;
-//   width: 20vw;
-//   max-width: 250px;
-//   min-width: 200px;
-//   z-index: 9;
-//   img {
-//     width: 100%;
-//     height: auto;
-//   }
-// }
+@media only screen and (max-width: 1100px) {
+  .content {
+    display: grid;
+    grid-template-areas: 1fr;
+    .textContainer {
+      button {
+        width: 80% !important;
+      }
+    }
+  }
+}
 </style>

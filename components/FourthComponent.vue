@@ -4,7 +4,7 @@
     <div class="content">
       <TitleComponent :title="title" :description="description" />
       <div class="carouselContainer">
-        <div class="description">
+        <div class="description" data-aos="fade-right">
           <h1>Title here</h1>
           <p>
             orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -15,13 +15,14 @@
             pariatur.
           </p>
         </div>
-        <CarouselComponent />
+          <CarouselComponent />
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 <script>
+import aosMixin from "~/mixins/aos";
+
 export default {
   data() {
     return {
@@ -30,6 +31,7 @@ export default {
         "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
     };
   },
+  mixins: [aosMixin],
 };
 </script>
 <style lang="scss" scoped>
@@ -38,25 +40,39 @@ export default {
   grid-template-columns: 1fr 4fr 1fr;
   background-color: white;
   text-align: center;
-  height: 100vh;
-
- 
+  height: 100%;
 
   .carouselContainer {
+    padding: 60px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    grid-gap: 100px;
     .description {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 40px;
 
-      p {
+      p,
+      h1 {
         padding-top: 20px;
         text-align: left;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+
+
+  .carouselContainer {
+    display: flex !important;
+    flex-direction: column;
+    
+    .description{
+      padding-top: 0;
+      order: 2;
+    }
+
   }
 }
 </style>

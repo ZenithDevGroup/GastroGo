@@ -4,49 +4,70 @@
       <div class="logoContainer">
         <NuxtLink to="/"><span>GastroGo</span></NuxtLink>
       </div>
-      <ul class="NavEntries">
-        <NuxtLink to="/">HOME</NuxtLink>
-        <NuxtLink to="/">ABOUT US</NuxtLink>
-        <NuxtLink to="/">PARTNERS</NuxtLink>
-        <NuxtLink to="/">FAQ</NuxtLink>
-        <NuxtLink to="/">CONTACT US</NuxtLink>
+      <div >
+        <ul class="NavEntries">
+        <NuxtLink to="/" >HOME</NuxtLink>
+        <NuxtLink v-bind:to="section2">ABOUT US</NuxtLink>
+        <NuxtLink v-bind:to="section3">OUR PARTNERS</NuxtLink>
+        <NuxtLink v-bind:to="section4">FAQ</NuxtLink>
+        <NuxtLink v-bind:to="section5">CONTACT US</NuxtLink>
       </ul>
-      <!-- <div id="navToggleIcon">
-          <font-awesome-icon
-            :icon="['fas', 'bars']"
-            class="icon"
-            size="lg"
-            @click="toggleMenu()"
-          />
-        </div> -->
+      </div>
+      <div id="navToggleIcon">
+        <v-icon v-if="!toggleNav" @click="toggleMenu()">mdi-menu</v-icon>
+         <v-icon v-if="toggleNav" @click="toggleMenu()">mdi-close</v-icon>
+      </div>
+    </div>
+    <div  id="dropdown-menu" v-if="toggleNav">
+      <DropdownMenuComponent @click.native="toggleMenu()"/>
     </div>
   </div>
 </template>
+<script>
+export default {
+  props:['section1', 'section2', 'section3','section4','section5'],
+  data: function(){
+    return {
+      toggleNav:false,
+    }
+  },
+  methods: {
+     toggleMenu(){
+       this.toggleNav =!this.toggleNav
+    }, 
+  }
+}
+</script>
 <style lang="scss" scoped>
+#navToggleIcon {
+  display: none;
+}
 .HeaderContainer {
+  background-color: rgb(236, 236, 236) !important;
+  position: fixed;
+  z-index: 999;
+  box-shadow: 0 1px 2px rgba(102, 102, 102, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+  width: 100%;
   .innerContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
   }
-  .logoContainer{
-  
+  .logoContainer {
     justify-content: center;
-    padding:30px 100px;
-    img{
+    padding: 30px 10vw;
+    img {
       width: 20px;
     }
   }
   .NavEntries {
     @media only screen and (min-width: 1100px) {
       display: grid;
-
     }
     @media only screen and (max-width: 1100px) {
       display: none;
     }
-    padding: 0 100px ;
+    padding: 0 10vw;
     margin: 0;
     height: 70px;
     grid-auto-flow: column;
@@ -73,6 +94,14 @@
   }
   a:hover {
     opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #navToggleIcon {
+    display: block;
+    padding: 30px 10vw;
+    margin: 0;
+    height: 70px;
   }
 }
 </style>

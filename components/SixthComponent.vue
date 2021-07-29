@@ -2,9 +2,18 @@
   <div class="MainContainer">
     <div></div>
     <div class="content">
-      <TitleComponent :title="titleContent[0].title" :description="titleContent[0].description"/>
+      <TitleComponent
+        :title="titleContent[0].title"
+        :description="titleContent[0].description"
+      />
       <div class="sheetContainer">
-        <div v-for="(item, i) in items" :key="i">
+        <div
+          v-for="(item, i) in items"
+          :key="i"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           <img :src="require(`~/assets/partners/${item.src}.png`)" alt="" />
         </div>
       </div>
@@ -12,6 +21,7 @@
   </div>
 </template>
 <script>
+import aosMixin from "~/mixins/aos";
 export default {
   data() {
     return {
@@ -65,13 +75,14 @@ export default {
       ],
       titleContent: [
         {
-          title: "Samarbejdspartnere",
+          title: "Our Amazing Partners",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
       ],
     };
   },
+  mixins: [aosMixin],
 };
 </script>
 <style lang="scss" scoped>
@@ -80,6 +91,7 @@ export default {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
   justify-content: center;
+  margin-bottom: 60px;
 
   div {
     justify-self: center;
@@ -87,13 +99,10 @@ export default {
 }
 .MainContainer {
   display: grid;
-  background-color: white;
   grid-template-columns: 1fr 4fr 1fr;
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin: 40px 0;
-  height: 560px;
 
   .title {
     padding-top: 60px;
@@ -111,6 +120,33 @@ export default {
   img {
     width: 100px;
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .sheetContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    div {
+      justify-self: center;
+    }
+  }
+}
+@media only screen and (max-width: 641px) {
+  .sheetContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    div {
+      justify-self: center;
+    }
   }
 }
 </style>
