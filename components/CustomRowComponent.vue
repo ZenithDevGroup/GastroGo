@@ -37,7 +37,6 @@ export default {
     }
     p {
       color: rgb(68, 68, 68);
-      font-size: 12px;
       padding: 10px 30px;
       flex-wrap: wrap;
     }

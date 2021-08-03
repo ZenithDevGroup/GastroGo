@@ -2,7 +2,7 @@
   <div class="MainContainer">
     <div></div>
 
-    <div class="content" data-aos="fade-right">
+    <div class="content" >
       <div class="title">
         <h3>Features</h3>
         <p>
@@ -12,7 +12,7 @@
       </div>
 
       <div class="customCol">
-        <div v-for="i in 3" :key="i">
+        <div v-for="i in 4" :key="i">
           <CustomRowComponent />
         </div>
       </div>
@@ -35,31 +35,30 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MainContainer {
+  background-color: blanchedalmond;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   .title {
     display: grid;
-    justify-content: start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
 
     h3 {
       padding-bottom: 10px;
+      font-size: clamp(1rem, 6vw, 4rem);
       color: rgb(202, 11, 53);
     }
     p {
       font-size: clamp(1rem, 5vw, 2rem);
       color: rgb(68, 68, 68);
-      max-width: 500px;
-      word-wrap: break-word;
     }
   }
   .content {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
     justify-content: center;
     text-align: left;
     padding: 60px 0;
-
     .imgContainer {
       display: flex;
       justify-content: center;
@@ -69,12 +68,11 @@ export default {
     }
 
     .customCol {
-      
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       justify-content: center;
-      row-gap: 60px;
-
+      grid-gap: 60px;
+      margin: 60px 0;
       div {
         justify-self: center;
       }

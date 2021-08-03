@@ -9,13 +9,14 @@
     /> -->
     <div class="content">
       <FirstComponent id="section1" ref="section1" />
-      <SecondComponent id="section2" ref="section2" />
+      
       <ThirdComponent id="section3" ref="section3" />
       <FourthComponent id="section4" ref="section4" />
+      <SecondComponent id="section2" ref="section2" />
       <div data-aos="fade-up" id="section5" ref="section5">
         <TestimonialComponent />
       </div>
-      <FifthComponent />
+   
       <div id="contact"></div>
       <SixthComponent />
     </div>
@@ -32,10 +33,11 @@ export default {
 <style lang="scss" scoped>
 .MainContainer {
   content: "";
-  background-color: #fafafa;
+  background-color: white;
   margin: 0;
+  overflow-wrap: break-word;
+  font-family: 'Josefin Sans' !important;
 
-  
 }
 // #section2,#section3, #section4, #section5{
 //   padding: 60px;

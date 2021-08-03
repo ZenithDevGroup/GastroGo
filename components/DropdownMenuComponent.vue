@@ -20,12 +20,14 @@
 .dropdown-content {
   position: absolute;
   text-align: center;
-  background-color: rgb(236, 236, 236) !important;
+  background-color: rgb(8, 8, 8) !important;
   width: 100%;
   height: auto;
+  left: 0;
+  right: 0;
   // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
-  z-index: 1;
+  z-index: 999;
 }
 .NavEntries {
   padding: 60px 0;
@@ -40,7 +42,7 @@
 }
 a {
   font-weight: bold;
-  color: #535252;
+  color: white;
   text-decoration: none;
   font-family: "Helvetica Neue";
   font-size: clamp(1rem, 2.5vw, 2rem);

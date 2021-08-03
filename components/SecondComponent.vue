@@ -3,7 +3,7 @@
     <div></div>
     <div class="content">
       <div>
-        <h1>SOME HEADLINE HERE</h1>
+        <h1>We determined that you're our target audience</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -20,21 +20,22 @@
 .MainContainer {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  background-color: white;
+  background-color: rgb(245, 109, 75);
   .content {
     height: 560px;
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
     text-align: center;
-    background-color: white;
+    color: white;
   }
   .content > div {
     margin: auto;
-  }
 
-  h1{
+    h1{
       padding: 40px;
+      font-size: clamp(1rem, 3vw, 4rem);
+    }
   }
 }
 </style>

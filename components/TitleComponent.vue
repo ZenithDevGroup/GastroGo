@@ -18,6 +18,7 @@ export default {
 
   h3 {
     padding-bottom: 10px;
+    font-size: clamp(1rem, 6vw, 4rem);
     color: rgb(202, 11, 53);
   }
   p {

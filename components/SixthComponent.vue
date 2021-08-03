@@ -10,9 +10,7 @@
         <div
           v-for="(item, i) in items"
           :key="i"
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
+          
         >
           <img :src="require(`~/assets/partners/${item.src}.png`)" alt="" />
         </div>
@@ -75,7 +73,7 @@ export default {
       ],
       titleContent: [
         {
-          title: "Our Amazing Partners",
+          title: "Partners",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
@@ -103,6 +101,7 @@ export default {
   justify-content: center;
   text-align: center;
   width: 100%;
+  background-color: white;
 
   .title {
     padding-top: 60px;
