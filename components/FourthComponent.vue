@@ -54,7 +54,8 @@ export default {
 
       p,
       h1 {
-        padding-top: 20px;
+        white-space: pre-wrap;
+        // padding-top: 20px;
         text-align: left;
       }
     }
@@ -65,6 +66,8 @@ export default {
   .carouselContainer {
     display: flex !important;
     flex-direction: column;
+    padding: 0 !important ;
+    grid-gap: 0 !important;
 
     .description {
       padding-top: 0;

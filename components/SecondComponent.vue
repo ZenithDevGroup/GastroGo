@@ -20,7 +20,7 @@
 .MainContainer {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  background-color: rgb(245, 109, 75);
+  background-color: rgb(247, 121, 104);
   .content {
     height: 560px;
     display: grid;
@@ -34,7 +34,7 @@
 
     h1{
       padding: 40px;
-      font-size: clamp(1rem, 3vw, 4rem);
+      font-size: clamp(1rem, 6vw, 4rem);
     }
   }
 }

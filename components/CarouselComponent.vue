@@ -39,6 +39,8 @@ export default {
 .questionContainer {
   height: 100%;
   width: 100%;
+  max-width: 475px;
+  max-height: 475px;
   background-color: #fafafa;
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +51,11 @@ export default {
     font-size: clamp(1rem, 5vw, 2rem);
     margin: auto;
     padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 641px) {
+  .questionContainer{
+    max-height: 375px;
   }
 }
 

@@ -16,16 +16,16 @@
         </div>
         <!-- <div class="customCol"> -->
         <div class="customRow">
-          <NuxtLink v-bind:to="section1">HOME</NuxtLink>
-          <NuxtLink v-bind:to="section2">ABOUT US</NuxtLink>
-          <NuxtLink v-bind:to="section3">OUR PARTNERS</NuxtLink>
-          <NuxtLink v-bind:to="section4">FAQ</NuxtLink>
-          <NuxtLink v-bind:to="section5">CONTACT US</NuxtLink>
+          <NuxtLink v-bind:to="section1">Home</NuxtLink>
+          <NuxtLink v-bind:to="section2">About</NuxtLink>
+          <NuxtLink v-bind:to="section3">Features</NuxtLink>
+          <NuxtLink v-bind:to="section4">Partners</NuxtLink>
+          <NuxtLink v-bind:to="section5">Blog</NuxtLink>
         </div>
         <div class="icons">
           
-          <a href=""> <v-icon large>mdi-instagram</v-icon> </a>
-           <a href=""><v-icon large>mdi-facebook</v-icon></a>
+          <a href=""> <v-icon large dark>mdi-instagram</v-icon> </a>
+           <a href=""><v-icon large dark>mdi-facebook</v-icon></a>
         </div>
         <!-- <div class="iconsSmall">
             <p>Follow us on</p>
@@ -83,15 +83,18 @@ export default {
 .customCol {
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 20px;
+  // grid-gap: 20px;
 
   .MainContainer {
+    background-color: black;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     justify-content: center;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 10px;
+    color: white;
+    font-family: "Josefin Sans";
 
     .imgContainer {
       img {
@@ -120,8 +123,7 @@ export default {
 
         a {
           text-decoration: none;
-          color: gray;
-          font-size: 12px;
+          color: white;
         }
         a:hover {
           font-weight: 700;
@@ -213,7 +215,7 @@ export default {
 //   }
 // }
 .pos {
-  background-color: #818181;
+  background-color: rgb(163, 127, 135);
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   justify-content: space-between;

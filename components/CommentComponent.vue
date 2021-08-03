@@ -59,8 +59,10 @@
     width: 100%;
     height: auto;
     padding: 20px;
-    background-color: grey;
-    color: white;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
     position: relative;
     text-align: left;
     display: flex;

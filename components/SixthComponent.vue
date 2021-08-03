@@ -100,7 +100,6 @@ export default {
   grid-template-columns: 1fr 4fr 1fr;
   justify-content: center;
   text-align: center;
-  width: 100%;
   background-color: white;
 
   .title {

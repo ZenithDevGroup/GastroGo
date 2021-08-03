@@ -13,14 +13,16 @@
               :wrapper="'h3'"
             ></typical>
           </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
         <div>
           <v-btn>Get Started</v-btn>
         </div>
       </div>
+
+
       <div class="imgContainer">
-        <!-- <img src="~/assets/images/phone.png" alt=""> -->
+        <img src="~/assets/images/devices.png" alt="" />
       </div>
     </div>
     <div></div>
@@ -52,46 +54,28 @@ export default {
   display: grid;
   background-color: white;
   margin: 0;
-
+  background-image: url("~/assets/images/bg.png");
+  background-size: cover;
   grid-template-columns: 1fr 4fr 1fr;
-  &::before {
-    content: "";
-    background-image: url("~/assets/images/bg.png");
-    background-size: cover;
-    position: absolute;
-    background-position: center;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.9;
-  }
   .content {
     line-height: 0.9;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
     align-content: center;
-    justify-content: center;
+    grid-gap: 60px;
+    justify-content: space-between;
     position: relative;
-    // .diagonal {
-    //   height: 100vh;
-    //   background-size: cover;
-    //   background-color: black;
-    //   background-image: url("~/assets/images/henry-perks-BJXAxQ1L7dI-unsplash.jpg");
-    // }
-
-    .imgContainer{
-      // background-color: rosybrown;
-      img{
-        width: 20%;
-        height: 50%;
+    .imgContainer {
+      img {
+        width: 100%;
+        height: auto;
       }
     }
     .textContainer {
-      font-size: calc((1.1 - 1) * 1.2vw + 4rem);
+      font-size: calc((1.1 - 1) * 1.2vw + 2rem);
       margin: auto;
       padding: 20px;
-      text-align: center;
+      text-align: left;
       color: black;
 
       p {
@@ -114,14 +98,22 @@ export default {
 }
 
 @media only screen and (max-width: 1100px) {
-  .content {
+.MainContainer{
+    .content {
     display: grid;
-    grid-template-areas: 1fr;
+    grid-auto-flow: row;
+    grid-template-columns: none;
+    text-align: center;
+    .imgContainer{
+      grid-row: 2
+    }
     .textContainer {
+      text-align: center !important;
       button {
         width: 80% !important;
       }
     }
   }
+}
 }
 </style>

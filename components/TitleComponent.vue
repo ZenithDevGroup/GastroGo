@@ -23,7 +23,6 @@ export default {
   }
   p {
     text-align: center;
-    font-size: 14px;
     color: grey;
     max-width: 560px;
     word-wrap: break-word;

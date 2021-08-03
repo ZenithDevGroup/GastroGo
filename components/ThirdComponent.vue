@@ -35,7 +35,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MainContainer {
-  background-color: blanchedalmond;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   .title {

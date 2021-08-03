@@ -76,10 +76,19 @@ export default {
 #navToggleIcon {
   display: none;
 }
-.change-color {
-  background-color: red !important;
+.change_color {
+  background-color: rgb(26, 25, 25) !important;
+  
+    a{
+      color: white !important;
+    }
+
+    .NavEntries>span{
+      color: white;
+    }
 }
 #container-header {
+  font-family: "Josefin Sans";
   background-color: transparent;
   position: fixed;
   z-index: 1;
@@ -117,6 +126,7 @@ export default {
     }
   }
   .NavEntries {
+
     height: 100%;
     @media only screen and (min-width: 1100px) {
       display: grid;
@@ -144,7 +154,6 @@ export default {
     font-weight: bold;
     color: black;
     text-decoration: none;
-    font-family: "Helvetica Neue";
     font-size: clamp(10px, 2.5vw, 14px);
     font-weight: 600;
 
@@ -154,6 +163,10 @@ export default {
   }
   a:hover {
     opacity: 0.5;
+  }
+  a:active{
+    font-weight: bold !important;
+    color: blanchedalmond;
   }
 }
 @media only screen and (max-width: 1100px) {
