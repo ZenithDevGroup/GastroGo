@@ -11,17 +11,17 @@
         </p>
       </div>
 
-      <div class="column">
-
-        <div>
-          <img src="~/assets/images/phone.png" alt="">
-        </div>
+        <!-- <div class="imgContainer">
+          <img src="~/assets/images/phone-logo.png" alt="" />
+        </div> -->
         <div class="customCol">
-        <div v-for="(item, i) in rowComponent " :key="i">
-          <CustomRowComponent :title="item.title"  :description= "item.description"/>
+          <div v-for="(item, i) in rowComponent" :key="i">
+            <CustomRowComponent
+              :title="item.title"
+              :description="item.description"
+            />
+          </div>
         </div>
-      </div>
-      </div>
     </div>
     <div></div>
   </div>
@@ -63,8 +63,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MainContainer {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  display: flex;
+  justify-content: center;
+  // display: grid;
+  // grid-template-columns: 1fr 4fr 1fr;
+  text-align: center;
   .title {
     display: grid;
     justify-content: center;
@@ -81,18 +84,13 @@ export default {
     }
   }
   .content {
+    max-width: 1270px;
+    margin: auto;
     display: grid;
     grid-template-rows: auto 1fr;
     justify-content: center;
     text-align: left;
     padding: 60px 0;
-    .imgContainer {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      background-size: cover;
-      background-image: url("~/assets/images/henry-perks-BJXAxQ1L7dI-unsplash.jpg");
-    }
 
     .customCol {
       display: grid;
@@ -129,6 +127,10 @@ export default {
         grid-template-columns: repeat(2, 1fr);
         justify-content: flex-start;
         text-align: left;
+
+        // .imgContainer{
+        //   display: none;
+        // }
         div {
           justify-self: flex-start;
         }
@@ -138,9 +140,11 @@ export default {
 }
 @media only screen and (max-width: 1100px) {
   .MainContainer {
+    
     .content {
       display: flex !important;
       flex-direction: column;
+    
 
       .title {
         // padding-top: ;
@@ -158,6 +162,8 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         text-align: left;
+
+      
         div {
           justify-self: flex-start;
         }

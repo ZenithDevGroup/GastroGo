@@ -28,8 +28,10 @@
       <v-btn id="btn">GET IN TOUCH</v-btn>
 
       <div id="navToggleIcon">
-        <v-icon v-if="!toggleNav" @click="toggleMenu()" light>mdi-menu</v-icon>
-        <v-icon v-if="toggleNav" @click="toggleMenu()" light>mdi-close</v-icon>
+        <v-icon v-if="(!toggleNav && isDark=='white') " @click="toggleMenu()" dark >mdi-menu</v-icon>
+        <v-icon v-if="(!toggleNav && isDark=='black') " @click="toggleMenu()" light >mdi-menu</v-icon>
+        <v-icon v-if="(toggleNav && isDark=='white')" @click="toggleMenu()" dark >mdi-close</v-icon>
+        <v-icon v-if="toggleNav && isDark=='black'" @click="toggleMenu()" light>mdi-close</v-icon>
       </div>
     </div>
     <div id="dropdown-menu" v-if="toggleNav">
@@ -48,6 +50,7 @@ export default {
       toggleNav: false,
       scrollPosition: null,
       isActive: false,
+      isDark: null
     };
   },
 
@@ -63,8 +66,11 @@ export default {
       this.isActive = !this.isActive;
     },
     handleScroll() {
-      console.log(window.scrollY);
       this.scrollPosition = window.scrollY;
+      if(this.scrollPosition >50){
+        this.isDark="white";
+      }else
+      this.isDark = "black";
     },
   },
   mounted() {
@@ -76,16 +82,20 @@ export default {
 #navToggleIcon {
   display: none;
 }
+
+
 .change_color {
   background-color: rgb(26, 25, 25) !important;
-  
+ 
     a{
       color: white !important;
     }
 
     .NavEntries>span{
-      color: white;
+      color: white !important;
     }
+
+    
 }
 #container-header {
   font-family: "Josefin Sans";
@@ -171,6 +181,11 @@ export default {
 }
 @media only screen and (max-width: 1100px) {
 
+.logoContainer{
+  span{
+    display: none !important;
+  }
+}
   #btn{
     display: none;
   }
@@ -179,6 +194,7 @@ export default {
     padding: 10px ;
     margin: 0;
     height: 70px;
+    
    
   }
 }

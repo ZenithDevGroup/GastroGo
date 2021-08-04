@@ -64,11 +64,11 @@ export default {
   background-size: cover;
   grid-template-columns: 1fr 4fr 1fr;
   .content {
-    line-height: 0.9;
+  
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-content: center;
-    grid-gap: 60px;
+    // grid-gap: 60px;
     justify-content: space-between;
     position: relative;
     .imgContainer {
@@ -114,6 +114,7 @@ export default {
 
 @media only screen and (max-width: 1100px) {
 .MainContainer{
+  grid-template-columns: 1fr 5fr 1fr;
     .content {
     display: grid;
     grid-auto-flow: row;
@@ -126,9 +127,9 @@ export default {
     .textContainer {
       text-align: center !important;
       font-size: calc((1.1 - 1) * 1.2vw + 2.5rem) !important;
-      button {
-        width: 80% !important;
-      }
+      // button {
+      //   width: 80% !important;
+      // }
     }
   }
 }
