@@ -2,7 +2,7 @@
   <div class="MainContainer">
     <div></div>
 
-    <div class="content" >
+    <div class="content">
       <div class="title">
         <h3>Features</h3>
         <p>
@@ -11,10 +11,16 @@
         </p>
       </div>
 
-      <div class="customCol">
-        <div v-for="i in 4" :key="i">
-          <CustomRowComponent />
+      <div class="column">
+
+        <div>
+          <img src="~/assets/images/phone.png" alt="">
         </div>
+        <div class="customCol">
+        <div v-for="(item, i) in rowComponent " :key="i">
+          <CustomRowComponent :title="item.title"  :description= "item.description"/>
+        </div>
+      </div>
       </div>
     </div>
     <div></div>
@@ -28,6 +34,28 @@ export default {
       title: "Features",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.",
+      rowComponent: [
+        {
+          title: "Send Push Notification",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+        },
+        {
+          title: "Loyalty Programs",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+        },
+        {
+          title: "Stamp Cards and Discount Coupons",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+        },
+        {
+          title: "Restaurant Promotions",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+        },
+      ],
     };
   },
   mixins: [aosMixin],
@@ -44,11 +72,11 @@ export default {
 
     h3 {
       padding-bottom: 10px;
-      font-size: clamp(1rem, 6vw, 4rem);
+      font-size: calc((1.1 - 1) * 1.2vw + 2.5rem);
       color: rgb(202, 11, 53);
     }
     p {
-      font-size: clamp(1rem, 5vw, 2rem);
+      font-size: calc((1.1 - 1) * 1.2vw + 1rem);
       color: rgb(68, 68, 68);
     }
   }
@@ -109,7 +137,7 @@ export default {
   }
 }
 @media only screen and (max-width: 1100px) {
-    .MainContainer {
+  .MainContainer {
     .content {
       display: flex !important;
       flex-direction: column;

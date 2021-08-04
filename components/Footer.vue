@@ -17,10 +17,12 @@
         <!-- <div class="customCol"> -->
         <div class="customRow">
           <NuxtLink v-bind:to="section1">Home</NuxtLink>
-          <NuxtLink v-bind:to="section2">About</NuxtLink>
+          <!-- <NuxtLink v-bind:to="section2">About</NuxtLink> -->
           <NuxtLink v-bind:to="section3">Features</NuxtLink>
-          <NuxtLink v-bind:to="section4">Partners</NuxtLink>
-          <NuxtLink v-bind:to="section5">Blog</NuxtLink>
+          <!-- <NuxtLink v-bind:to="section3">Partners</NuxtLink> -->
+          <NuxtLink v-bind:to="section4">Pricing</NuxtLink>
+
+          <NuxtLink v-bind:to="section4">FAQ</NuxtLink>
         </div>
         <div class="icons">
           

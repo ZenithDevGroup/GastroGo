@@ -10,19 +10,19 @@
       <div>
         <ul class="NavEntries">
           <NuxtLink to="/">Home</NuxtLink>
-          <NuxtLink v-bind:to="section2">About</NuxtLink>
+          <!-- <NuxtLink v-bind:to="section2">About</NuxtLink> -->
           <NuxtLink v-bind:to="section2" v-on:click.native="isActiveFunc"
             >Features
-            <span v-if="isActive"
+            <!-- <span v-if="isActive"
               ><img
                 src="~/assets/images/arrow-down-sign-to-navigate.png"
                 alt=""
             /></span>
             <span v-if="!isActive"
-              ><img src="~/assets/images/up-arrow.png" alt="" /></span
-          ></NuxtLink>
-          <NuxtLink v-bind:to="section4">Team</NuxtLink>
-          <NuxtLink v-bind:to="section5">Blog</NuxtLink>
+              ><img src="~/assets/images/up-arrow.png" alt="" /></span -->
+          </NuxtLink>
+          <NuxtLink v-bind:to="section4">Pricing</NuxtLink>
+          <NuxtLink v-bind:to="section4">FAQ</NuxtLink>
         </ul>
       </div>
       <v-btn id="btn">GET IN TOUCH</v-btn>
@@ -154,7 +154,7 @@ export default {
     font-weight: bold;
     color: black;
     text-decoration: none;
-    font-size: clamp(10px, 2.5vw, 14px);
+    // font-size: clamp(10px, 2.5vw, 14px);
     font-weight: 600;
 
     &.router-link-exact-active {

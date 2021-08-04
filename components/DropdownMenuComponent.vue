@@ -2,11 +2,11 @@
   <div class="dropdown-content">
     <div>
       <ul class="NavEntries">
-        <NuxtLink to="/">HOME</NuxtLink>
-        <NuxtLink to="#section2">ABOUT US</NuxtLink>
-        <NuxtLink to="#section3">PARTNERS</NuxtLink>
-        <NuxtLink to="#section4">FAQ</NuxtLink>
-        <NuxtLink to="#section5">CONTACT US</NuxtLink>
+        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="#section2">About</NuxtLink>
+        <NuxtLink to="#section3">Features</NuxtLink>
+         <NuxtLink to="#section3">Partners</NuxtLink>
+        <NuxtLink to="#section4">Pricing</NuxtLink>
       </ul>
     </div>
   </div>
@@ -44,7 +44,6 @@ a {
   font-weight: bold;
   color: white;
   text-decoration: none;
-  font-family: "Helvetica Neue";
   font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 600;
 

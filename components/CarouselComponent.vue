@@ -47,7 +47,6 @@ export default {
 
   h3 {
     font-weight: 700;
-    font-family: "Helvetica Neue";
     font-size: clamp(1rem, 5vw, 2rem);
     margin: auto;
     padding: 0 20px;

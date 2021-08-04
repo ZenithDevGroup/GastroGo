@@ -8,10 +8,9 @@
     </div>
     <div>
       <div class="textContainer">
-        <h3 class="headline pink--text text--accent-2 text-center">Superdry</h3>
+        <h3 class="headline pink--text text--accent-2 text-center">{{ title }}</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
+          {{ description}}
         </p>
       </div>
     </div>
@@ -20,7 +19,10 @@
 <script>
 import aosMixin from "~/mixins/aos";
 export default {
+  props: ['title', 'description'],
   mixins: [aosMixin],
+
+
 };
 </script>
 <style lang="scss" scoped>
@@ -49,7 +51,14 @@ export default {
     vertical-align: middle;
     width: 50px;
     height: 50px;
+    border-radius: 10%;
+  }
+}
+
+.customCard:hover{
+  img {
     border-radius: 50%;
+    transition: all 1s;
   }
 }
 

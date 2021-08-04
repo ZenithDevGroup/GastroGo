@@ -19,7 +19,7 @@
           delimiter-icon="mdi-minus"
           height="300"
           hide-delimiter-background
-          data-aos="fade-left"
+       
         >
           <v-carousel-item v-for="i in 3" :key="i">
             <div class="questionContainer">
@@ -36,9 +36,9 @@
 export default {
   data() {
     return {
-      title: "Testimonials",
+      title: "What others think about us",
       description:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+        " ",
     };
   },
 };
