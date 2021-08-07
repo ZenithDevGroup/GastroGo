@@ -34,7 +34,6 @@ export default {
   justify-content: center;
   border-radius: 12px;
   .textContainer {
-    background-color: wheat;
     h3 {
       padding: 10px;
     }

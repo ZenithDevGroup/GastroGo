@@ -21,7 +21,7 @@
             <span v-if="!isActive"
               ><img src="~/assets/images/up-arrow.png" alt="" /></span -->
           </NuxtLink>
-          <NuxtLink v-bind:to="section4">Pricing</NuxtLink>
+          <NuxtLink to="/pricing">Pricing</NuxtLink>
           <NuxtLink v-bind:to="section4">FAQ</NuxtLink>
         </ul>
       </div>
@@ -102,7 +102,7 @@ export default {
   background-color: transparent;
   position: fixed;
   z-index: 1;
-  height: 100px;
+  // height: 100px;
   margin: 0;
   right: 0;
   left: 0;
@@ -116,7 +116,7 @@ export default {
     margin: 8px 0; 
   }
   .innerContainer {
-    padding: 25px 6vw;
+    padding: 8px 6vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

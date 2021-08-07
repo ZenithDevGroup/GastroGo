@@ -39,15 +39,13 @@ export default {
 .questionContainer {
   height: 100%;
   width: 100%;
-  max-width: 475px;
-  max-height: 475px;
   background-color: #fafafa;
   display: flex;
   flex-wrap: wrap;
 
   h3 {
     font-weight: 700;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: calc((1.1 - 1) * 1.2vw + 2.2rem);
     margin: auto;
     padding: 0 20px;
   }

@@ -1,7 +1,5 @@
 <template>
   <div class="MainContainer">
-    <div></div>
-
     <div class="content">
       <div class="title">
         <h3>Features</h3>
@@ -10,10 +8,6 @@
           tempor incididunt ut labore et.
         </p>
       </div>
-
-        <!-- <div class="imgContainer">
-          <img src="~/assets/images/phone-logo.png" alt="" />
-        </div> -->
         <div class="customCol">
           <div v-for="(item, i) in rowComponent" :key="i">
             <CustomRowComponent
@@ -23,7 +17,6 @@
           </div>
         </div>
     </div>
-    <div></div>
   </div>
 </template>
 <script>
@@ -65,9 +58,6 @@ export default {
 .MainContainer {
   display: flex;
   justify-content: center;
-  // display: grid;
-  // grid-template-columns: 1fr 4fr 1fr;
-  text-align: center;
   .title {
     display: grid;
     justify-content: center;
@@ -84,8 +74,8 @@ export default {
     }
   }
   .content {
-    max-width: 1270px;
-    margin: auto;
+    width: 80%;
+    height: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
     justify-content: center;
@@ -112,14 +102,9 @@ export default {
       flex-direction: column;
 
       .title {
-        // padding-top: ;
         justify-content: center !important;
         text-align: center !important;
         padding-bottom: 20px;
-
-        // p {
-        //   max-width: 100% !important;
-        // }
       }
       .customCol {
         padding-top: 20px;
@@ -127,10 +112,6 @@ export default {
         grid-template-columns: repeat(2, 1fr);
         justify-content: flex-start;
         text-align: left;
-
-        // .imgContainer{
-        //   display: none;
-        // }
         div {
           justify-self: flex-start;
         }
@@ -140,21 +121,16 @@ export default {
 }
 @media only screen and (max-width: 1100px) {
   .MainContainer {
-    
+    grid-template-columns: auto 1fr auto;
     .content {
       display: flex !important;
       flex-direction: column;
     
 
       .title {
-        // padding-top: ;
         justify-content: center !important;
         text-align: center !important;
         padding-bottom: 20px;
-
-        // p {
-        //   max-width: 100% !important;
-        // }
       }
       .customCol {
         padding-top: 20px;
