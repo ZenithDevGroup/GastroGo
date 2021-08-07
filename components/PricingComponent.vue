@@ -2,7 +2,7 @@
   <div class="MainContainer">
     <div class="content">
       <div>
-        <h3>Find a plan that's right for you.</h3>
+        <h1>Find a plan that's right for you.</h1>
         <p>Every plan comes with a 30-day free trial</p>
       </div>
       <div class="custom-row">
@@ -17,13 +17,13 @@
 .MainContainer {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  // height: 100vh;
   .content {
     padding-top: 100px;
     padding-bottom: 60px;
     width: 80%;
     height: 100%;
-    display: grid;grid-template-rows: 1fr 1fr;
+    display: grid;grid-template-rows: auto 1fr;
     grid-gap: 60px;
     text-align: center;
     align-content: center;

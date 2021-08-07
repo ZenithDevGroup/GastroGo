@@ -18,12 +18,12 @@
         </div>
         <div class="btnContainer bigBtnContainer">
           <v-btn class="tryForFreeBtn">Try for free</v-btn>
-          <v-btn class="viewPlansBtn" to="/pricing"> view plans</v-btn>
+          <v-btn text class="viewPlansBtn" to="/pricing"> view plans</v-btn>
         </div>
       </div>
       <div class="btnContainer smallBtnContainer">
         <v-btn class="tryForFreeBtn">Try for free</v-btn>
-        <v-btn class="viewPlansBtn" to="/pricing"> view plans</v-btn>
+        <v-btn text class="viewPlansBtn" to="/pricing"> view plans</v-btn>
       </div>
       <div class="imgContainer">
         <img src="~/assets/images/devices.png" alt="" />
@@ -93,7 +93,12 @@ export default {
   background-color: white !important;
 }
 .viewPlansBtn {
-  background-color: rgb(247, 213, 207) !important;
+   border-radius: 50px;
+  padding: 25px !important;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+  // background-color: rgb(247, 213, 207) !important;
   color: rgb(253, 92, 92);
 }
 button {
