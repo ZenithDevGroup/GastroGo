@@ -1,6 +1,6 @@
 <template>
   <div class="templateParent">
-    <Header
+      <Header
       :section1="section1"
       :section2="section2"
       :section3="section3"
@@ -9,11 +9,16 @@
     />
     <div class="route">
       <Nuxt />
-      <Footer :section1="section1"
-      :section2="section2"
-      :section3="section3"
-      :section4="section4"
-      :section5="section5"></Footer>
+      
+    </div>
+    <div class="footer">
+      <Footer
+        :section1="section1"
+        :section2="section2"
+        :section3="section3"
+        :section4="section4"
+        :section5="section5"
+      ></Footer>
     </div>
   </div>
 </template>
@@ -53,12 +58,16 @@ export default {
 
 <style lang="scss">
 body {
-  font-family: "Helvetica Neue";
   margin: 0;
   overflow-x: hidden;
-}
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 
-footer {
-  margin: 0 !important;
+}
+.spacer
+{
+    width: 100%;
+    height: 95px;
 }
 </style>

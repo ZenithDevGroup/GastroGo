@@ -4,7 +4,7 @@
     
   >
     <div class="imgContainer">
-      <img src="https://cdn.vuetifyjs.com/images/cards/cooking.png" alt="" />
+      <img :src="require('~/assets/feature-icons/'+ imageUrl + '.png')" alt="" />
     </div>
     <div>
       <div class="textContainer">
@@ -19,7 +19,7 @@
 <script>
 import aosMixin from "~/mixins/aos";
 export default {
-  props: ['title', 'description'],
+  props: ['title', 'description', 'imageUrl'],
   mixins: [aosMixin],
 
 
@@ -47,11 +47,16 @@ export default {
 .imgContainer {
   text-align: center;
   padding: 20px;
+  
   img {
+    background-image: url("~/assets/hero-images/cookie.png");
     vertical-align: middle;
+    // background-color: rgb(250, 189, 133);
     width: 50px;
     height: 50px;
+    color: white;
     border-radius: 10%;
+    padding: 4px;
   }
 }
 

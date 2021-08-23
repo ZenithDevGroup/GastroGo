@@ -1,40 +1,64 @@
 <template>
   <div class="MainContainer">
-    <div></div>
     <div class="content">
       <div>
-        <h1>We determined that you're our target audience</h1>
+        <h1>GastroGo is completely free - but how?</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          GastroGo is a freemium solution. It's completely free for
+          restaurateurs and users alike - 0 DKK in setup fees, 0 DKK in
+          commission, and 0 DKK in other fees and charges. While the core
+          package of GastroGo will always be free, we will offer a premium
+          subscription for restaurants that will give you a suite of extra
+          features, such as curated data insights, sending push notifications to
+          followers, table booking and loyalty programs.
         </p>
+        <ButtonComponent />
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .MainContainer {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
   background-color: rgb(247, 121, 104);
   .content {
-    height: 560px;
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
+    width: 80%;
+    // padding: 40px 0;
+    max-width: 1320px;
   }
   .content > div {
-    margin: auto;
+    text-align: center;
 
-    h1{
-      padding: 40px;
-      font-size: clamp(1rem, 6vw, 4rem);
+    h1 {
+      padding-bottom: 40px ;
+      font-size: clamp(1rem, 6vw, 2.5rem);
+    }
+    p {
+      padding-bottom: 40px;
+      line-height: 1.5;
+      text-align: center;
+      font-size: clamp(1rem, 6vw, 1.2rem);
+      max-width: 60ch;
+      text-align: justify;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .MainContainer{
+    height: 100% !important;
+    .content{
+      padding: 60px 0;
     }
   }
 }

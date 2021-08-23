@@ -2,20 +2,20 @@
   <div class="MainContainer">
     <div class="content">
       <div class="title">
-        <h3>Features</h3>
+        <h3> Everything you need</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod
-          tempor incididunt ut labore et.
+         Our partners love us due to all our features included in one system.
         </p>
       </div>
-        <div class="customCol">
-          <div v-for="(item, i) in rowComponent" :key="i">
-            <CustomRowComponent
-              :title="item.title"
-              :description="item.description"
-            />
-          </div>
+      <div class="customCol">
+        <div v-for="(item, i) in rowComponent" :key="i">
+          <CustomRowComponent
+            :title="item.title"
+            :description="item.description"
+            :imageUrl="item.src"
+          />
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -29,24 +29,39 @@ export default {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.",
       rowComponent: [
         {
-          title: "Send Push Notification",
+          title: "Online Ordering",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+            "Let your customers order from your restaurant directly from their smartphone.",
+          src: "order",
         },
         {
-          title: "Loyalty Programs",
+          title: "Free Flexibility",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+            "Change your menu daliy and much more without any extra cost.",
+          src: "chain",
         },
         {
-          title: "Stamp Cards and Discount Coupons",
+          title: "POS",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+            "We offer a smart POS system where you can easily change and add items in the system. ",
+          src: "payment-terminal",
         },
         {
-          title: "Restaurant Promotions",
+          title: "Table Booking",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor",
+            "Let your customers book at table from your restaurant directly from their smartphone.",
+          src: "booking",
+        },
+        {
+          title: "Companion app",
+          description: "Accept orders directly on your smartphone.",
+          src: "delivery-box",
+        },
+        {
+          title: "Accounting overview",
+          description:
+            "Download your data directly from the app",
+          src: "accounting",
         },
       ],
     };
@@ -56,6 +71,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MainContainer {
+  scroll-behavior: smooth;
   display: flex;
   justify-content: center;
   .title {
@@ -64,11 +80,14 @@ export default {
     text-align: center;
 
     h3 {
+      position: relative;
+      max-width: 30ch;
       padding-bottom: 10px;
       font-size: calc((1.1 - 1) * 1.2vw + 2.5rem);
       color: rgb(202, 11, 53);
     }
     p {
+         position: relative;
       font-size: calc((1.1 - 1) * 1.2vw + 1rem);
       color: rgb(68, 68, 68);
     }
@@ -81,10 +100,11 @@ export default {
     justify-content: center;
     text-align: left;
     padding: 60px 0;
+    margin-top: 60px;
 
     .customCol {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       justify-content: center;
       grid-gap: 60px;
       margin: 60px 0;
@@ -95,37 +115,36 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1366px) {
-  .MainContainer {
-    .content {
-      display: flex !important;
-      flex-direction: column;
+// @media only screen and (max-width: 1366px) {
+//   .MainContainer {
+//     .content {
+//       display: flex !important;
+//       flex-direction: column;
 
-      .title {
-        justify-content: center !important;
-        text-align: center !important;
-        padding-bottom: 20px;
-      }
-      .customCol {
-        padding-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: flex-start;
-        text-align: left;
-        div {
-          justify-self: flex-start;
-        }
-      }
-    }
-  }
-}
+//       .title {
+//         justify-content: center !important;
+//         text-align: center !important;
+//         padding-bottom: 20px;
+//       }
+//       .customCol {
+//         padding-top: 20px;
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         justify-content: flex-start;
+//         text-align: left;
+//         div {
+//           justify-self: flex-start;
+//         }
+//       }
+//     }
+//   }
+// }
 @media only screen and (max-width: 1100px) {
   .MainContainer {
     grid-template-columns: auto 1fr auto;
     .content {
       display: flex !important;
       flex-direction: column;
-    
 
       .title {
         justify-content: center !important;
@@ -136,12 +155,11 @@ export default {
         padding-top: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         text-align: left;
 
-      
         div {
-          justify-self: flex-start;
+          display: flex;
+          justify-content: start;
         }
       }
     }

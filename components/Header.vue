@@ -4,56 +4,78 @@
       <div class="logoContainer">
         <NuxtLink to="/"
           ><img src="~/assets/images/logo.svg" alt="" />
-          <span>astroGo</span></NuxtLink
+          <p>GastroGo</p></NuxtLink
         >
       </div>
       <div>
         <ul class="NavEntries">
           <NuxtLink to="/">Home</NuxtLink>
-          <!-- <NuxtLink v-bind:to="section2">About</NuxtLink> -->
           <NuxtLink v-bind:to="section2" v-on:click.native="isActiveFunc"
             >Features
-            <!-- <span v-if="isActive"
-              ><img
-                src="~/assets/images/arrow-down-sign-to-navigate.png"
-                alt=""
-            /></span>
-            <span v-if="!isActive"
-              ><img src="~/assets/images/up-arrow.png" alt="" /></span -->
           </NuxtLink>
-          <NuxtLink to="/pricing">Pricing</NuxtLink>
-          <NuxtLink v-bind:to="section4">FAQ</NuxtLink>
+          <NuxtLink v-bind:to="section3">Pricing</NuxtLink>
         </ul>
       </div>
-      <v-btn id="btn">GET IN TOUCH</v-btn>
-
-      <div id="navToggleIcon">
-        <v-icon v-if="(!toggleNav && isDark=='white') " @click="toggleMenu()" dark >mdi-menu</v-icon>
-        <v-icon v-if="(!toggleNav && isDark=='black') " @click="toggleMenu()" light >mdi-menu</v-icon>
-        <v-icon v-if="(toggleNav && isDark=='white')" @click="toggleMenu()" dark >mdi-close</v-icon>
-        <v-icon v-if="toggleNav && isDark=='black'" @click="toggleMenu()" light>mdi-close</v-icon>
+      <div class="buttonContainer">  
+        <ButtonComponent id="btn" />
+        <!-- <div class="v2dropdown">
+          <v-icon class="dropicon">mdi-google-earth</v-icon>
+          <div class="v2dropdown-content">
+            <a href="#"> English</a>
+            <a href="#">Dansk</a>
+          </div>
+        </div> -->
+      
+        <div id="navToggleIcon">
+          <v-icon
+            v-if="!toggleNav && isDark == 'white'"
+            @click="toggleMenu()"
+            dark
+            large
+            >mdi-menu</v-icon
+          >
+          <v-icon
+            v-if="!toggleNav && isDark == 'black'"
+            @click="toggleMenu()"
+            light
+            large
+            >mdi-menu</v-icon
+          >
+          <v-icon
+            v-if="toggleNav && isDark == 'black'"
+            @click="toggleMenu()"
+            dark
+            >mdi-close</v-icon
+          >
+          <v-icon
+            v-if="toggleNav && isDark == 'white'"
+            @click="toggleMenu()"
+            light
+            >mdi-close</v-icon
+          >
+        </div>
       </div>
     </div>
     <div id="dropdown-menu" v-if="toggleNav">
       <DropdownMenuComponent @click.native="toggleMenu()" />
     </div>
-    <!-- <div  >
-      <ThirdComponent  />
-    </div> -->
   </div>
 </template>
 <script>
+import CountryFlag from "vue-country-flag";
 export default {
+  components: {
+    CountryFlag,
+  },
   props: ["section1", "section2", "section3", "section4", "section5"],
   data: function () {
     return {
       toggleNav: false,
       scrollPosition: null,
       isActive: false,
-      isDark: null
+      isDark: null,
     };
   },
-
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -67,10 +89,9 @@ export default {
     },
     handleScroll() {
       this.scrollPosition = window.scrollY;
-      if(this.scrollPosition >50){
-        this.isDark="white";
-      }else
-      this.isDark = "black";
+      if (this.scrollPosition >= 50) {
+        this.isDark = "white";
+      } else this.isDark = "black";
     },
   },
   mounted() {
@@ -79,64 +100,129 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+#dropdown-menu {
+  position: absolute;
+  top: 0;
+}
+.v2dropdown {
+  position: relative;
+  display: inline-block;
+}
+.v2dropdown:hover {
+  cursor: pointer;
+}
+
+.v2dropdown-content {
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.v2dropdown-content a {
+  color: black;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+// .v2dropdown-content a:hover {background-color: #ddd;}
+
+.v2dropdown:hover .v2dropdown-content {
+  display: block;
+}
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+}
+
 #navToggleIcon {
   display: none;
 }
-
-
 .change_color {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  animation: smoothScroll 1s forwards;
   background-color: rgb(26, 25, 25) !important;
- 
-    a{
-      color: white !important;
-    }
+  box-shadow: 0 1px 2px rgba(102, 102, 102, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+  z-index: 1000;
+  p {
+    color: white !important;
+  }
 
-    .NavEntries>span{
-      color: white !important;
-    }
+  .v-icon {
+    color: white;
+  }
 
-    
+  .NavEntries > span {
+    color: white !important;
+  }
+  .NavEntries > a {
+    color: white !important;
+  }
 }
 #container-header {
+  width: 100%;
+  -webkit-transition: position 10s;
+  -moz-transition: position 10s;
+  -ms-transition: position 10s;
+  -o-transition: position 10s;
+  transition: position 10s;
+
   font-family: "Josefin Sans";
   background-color: transparent;
   position: fixed;
-  z-index: 1;
-  // height: 100px;
+  z-index: 9;
   margin: 0;
   right: 0;
   left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
   // box-shadow: 0 1px 2px rgba(102, 102, 102, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
   width: 100%;
-
-  #btn{
-    background-color: rgb(211, 23, 79);
-    color: white;
-    letter-spacing: 2px;
-    margin: 8px 0; 
-  }
   .innerContainer {
-    padding: 8px 6vw;
+    // padding: 8px 6vw;
+    width: 85%;
     display: flex;
+    align-content: center;
     flex-direction: row;
     justify-content: space-between;
   }
   .logoContainer {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // font-size: 22px;
+    text-align: center;
     height: 100%;
     span {
       vertical-align: middle;
     }
     img {
       vertical-align: middle;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
     }
   }
   .NavEntries {
-
     height: 100%;
     @media only screen and (min-width: 1100px) {
       display: grid;
@@ -144,7 +230,7 @@ export default {
     @media only screen and (max-width: 1100px) {
       display: none;
     }
-    padding: 15px 0;
+    // padding: 15px 0;
     grid-auto-flow: column;
     grid-column-gap: 22px;
     align-items: center;
@@ -174,28 +260,27 @@ export default {
   a:hover {
     opacity: 0.5;
   }
-  a:active{
+  a:active {
     font-weight: bold !important;
     color: blanchedalmond;
   }
 }
 @media only screen and (max-width: 1100px) {
-
-.logoContainer{
-  span{
-    display: none !important;
+  .logoContainer {
+    span {
+      display: none !important;
+    }
   }
-}
-  #btn{
+  #btn {
     display: none;
+  }
+  #dropdown-menu {
+    overflow: hidden !important;
   }
   #navToggleIcon {
     display: inline-block;
-    padding: 10px ;
+    padding: 30px 20px;
     margin: 0;
-    height: 70px;
-    
-   
   }
 }
 </style>

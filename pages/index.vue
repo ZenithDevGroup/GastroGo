@@ -1,17 +1,18 @@
 <template>
   <div class="MainContainer">
     <div class="content">
+     
       <FirstComponent id="section1" ref="section1" />
-
-      <ThirdComponent id="section3" ref="section3" />
-      <FourthComponent id="section4" ref="section4" />
-      <SecondComponent id="section2" ref="section2" />
-      <div data-aos="fade-up" id="section5" ref="section5">
+      <ThirdComponent id="section2" ref="section2" />
+      <FourthComponent />
+      <SecondComponent />
+      <div data-aos="fade-up">
         <TestimonialComponent />
       </div>
-
-      <div id="contact"></div>
-      <SixthComponent />
+      <PricingComponent id="section3" ref="section3"/>
+      <GetInTouchComponent id="section5" ref="contactus"/>
+     
+      <!-- <SixthComponent /> -->
     </div>
   </div>
 </template>
@@ -22,12 +23,21 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
+
+html{
+  scroll-behavior: smooth;
+  animation: all 7s infinite;
+}
 .MainContainer {
+  scroll-behavior: smooth !important;
   content: "";
   background-color: white;
   margin: 0;
   overflow-wrap: break-word;
   font-family: "Josefin Sans" !important;
+
+ 
+
 }
 </style>

@@ -1,34 +1,31 @@
 <template>
-  <v-carousel
-    
-    dark
-    :show-arrows="false"
-    cycle
-    hide-delimiters
-    data-aos="fade-left"
-  >
-    <v-carousel-item v-for="(item, i) in items" :key="i">
-      <div class="questionContainer">
-        <h3>{{ item.question }}</h3>
-      </div>
-    </v-carousel-item>
-  </v-carousel>
+  <carousel perPage="1" autoplay="true" loop="true">
+  <slide v-for="(item, i) in items" :key="i">
+    <div class="slideContainer">
+        <img :src="require(`~/assets/images/${item.src}.png`)" alt="" />
+      </div> 
+  </slide>
+
+</carousel>
 </template>
 <script>
 import aosMixin from "~/mixins/aos";
-
+import { Carousel, Slide } from 'vue-carousel';
 export default {
+    components: {
+    Carousel,
+    Slide
+  },
   data() {
     return {
       items: [
         {
-          question: "What do they want?",
+          src: "islide4",
         },
         {
-          question: "What do they need?",
+          src: "islide5",
         },
-        { question: "Where are they from? " },
-        { question: "How much do they spend?" },
+        { src: "islide6" },
       ],
     };
   },
@@ -36,25 +33,26 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.questionContainer {
-  height: 100%;
-  width: 100%;
-  background-color: #fafafa;
+
+.slideContainer {
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  img {
+    padding: 60px 0;
+    width: 100%;
+    height: 100%;
+  }
 
-  h3 {
-    font-weight: 700;
-    font-size: calc((1.1 - 1) * 1.2vw + 2.2rem);
-    margin: auto;
-    padding: 0 20px;
-  }
-}
-@media only screen and (max-width: 641px) {
-  .questionContainer{
-    max-height: 375px;
-  }
 }
 
-
+@media only screen and (max-width: 991px){
+  img {
+    padding: 60px 0;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+  }
+  
+}
 </style>

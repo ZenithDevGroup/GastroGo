@@ -1,6 +1,6 @@
 <template>
-  <div class="MainContainer">
-    <v-icon>{{ icon }}</v-icon>
+  <div class="IconContainer" >
+    <v-icon>mdi-check</v-icon>
     <p>{{ iconDescription}}</p>
   </div>
 </template>
@@ -10,10 +10,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  div {
-      display: flex;
-      justify-content: center;
-
+  .IconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
       p {
         padding: 8px 4px;
       }
