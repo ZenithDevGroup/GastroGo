@@ -47,7 +47,7 @@
           </div>
           <div>
             <v-icon>mdi-email</v-icon>
-            <p>Josef@gastrogo.dk</p>
+            <p>josef@gastrogo.dk</p>
           </div>
           <div>
             <v-icon>mdi-phone</v-icon>
