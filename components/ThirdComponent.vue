@@ -159,7 +159,7 @@ export default {
 
         div {
           display: flex;
-          justify-content: start;
+          justify-content: flex-start;
         }
       }
     }
