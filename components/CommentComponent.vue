@@ -84,6 +84,12 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center !important;
+
+    p{
+      padding: 10px 0;
+      line-height: 1.5;
+    }
   }
   .imgContainer {
     display: flex;
@@ -97,4 +103,39 @@ export default {
     }
   }
 }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+@media only screen and (max-width: 1100px) {
+  .customerProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .profileInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+
+    p{
+      padding: 10px 0;
+      line-height: 1.5;
+    }
+  }
+  .imgContainer {
+    display: flex;
+    justify-content: center !important;
+    padding-bottom:60px ;
+    img {
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      max-width: 475px;
+      max-height: 600px;
+    }
+  }
+}
+
+  }}
 </style>

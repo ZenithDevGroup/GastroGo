@@ -34,17 +34,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MainContainer {
+  
   display: flex;
   overflow: hidden !important;
   justify-content: center;
   align-content: center;
-  height: 100vh;
+  // height: 100vh;
   .content {
     width: 80%;
     display: grid;
     justify-content: space-around;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
+    // grid-gap: 60px;
 
     .description {
       text-align: left;
@@ -58,7 +59,7 @@ export default {
         color: rgb(202, 11, 53) !important;
       }
       p {
-        line-height: 1.5;
+        line-height: 1.3;
         font-size: calc((1.1 - 1) * 1.2vw + 1rem);
         color: grey;
         word-wrap: break-word;
@@ -69,6 +70,7 @@ export default {
       order: 2;
       display: flex;
       align-items: center;
+      margin-bottom: 60px;
       div {
         width: 100%;
       }
@@ -78,15 +80,17 @@ export default {
 
 @media only screen and (max-width: 1000px) {
   .MainContainer {
-    height: 100% !important;
+    // height: 100vh !important;
     display: flex !important;
     justify-content: center;
+
   }
   .content {
-    display: flex !important;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 60px;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 60px 0;
 
 
 

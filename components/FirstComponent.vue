@@ -2,25 +2,27 @@
 <template>
   <div class="MainContainer">
     <div class="content">
-      <div class="textContainer">
-        <div>
+      <div>
+        <div class="textContainer">
           <h1>BE A PARTNER TODAY</h1>
-          <p
-            >Become a part of the best online order platform GastroGo within 24
-            hours for FREE. Press the button below and fill out the form.</p
-          >
+          <p>
+            Become a part of the best online order platform GastroGo within 24
+            hours for FREE. Press the button below and fill out the form.
+          </p>
+        </div>
+        <div class="imgContainer bigImage">
+          <img src="~/assets/hero-images/newdevices.png" alt="" />
         </div>
       </div>
-      <div class="smallBtnContainer">
-        <v-btn class="tryForFreeBtn" ><a href="#section5">Try for free</a></v-btn>
-      </div>
-      <div class="imgContainer">
+      <div class="imgContainer smallImage">
         <img src="~/assets/hero-images/newdevices.png" alt="" />
       </div>
-    </div>
-
-    <div class="btnContainer bigBtnContainer">
-      <v-btn class="tryForFreeBtn" ><a href="#section5">Try for free</a></v-btn>
+      <div>
+        <!-- <v-btn class="tryForFreeBtn"
+          ><a href="#section5">Try for free</a></v-btn
+        > -->
+        <button><a href="#section5">TRY FOR FREE</a></button>
+      </div>
     </div>
     <div class="hero-container">
       <img src="~/assets/hero-images/lemon.png" alt="" />
@@ -109,44 +111,60 @@ export default {
   left: 10%;
 }
 .MainContainer {
-  display: flex;
-  overflow: hidden;
-  height: 100vh;
+  display: grid;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
 
   .content {
+    margin: auto;
     width: 80%;
+    // max-height: 56.25vw;
     display: grid;
-    grid-gap: 60px;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
-    justify-content: space-between;
+    height: 100vh;
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
     z-index: 2;
+
+    .smallImage {
+      display: none;
+    }
+    div:nth-child(1) {
+      display: grid;
+      grid-auto-flow: column;
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        line-height: 1.3;
+        margin: auto;
+        text-align: center !important;
+        color: black;
+
+        h1 {
+          font-size: calc((1.1 - 1) * 1.2vw + 3.3rem);
+        }
+        p {
+          font-size: calc((1.1 - 1) * 1.2vw + 1.2rem);
+          max-width: 48ch;
+        }
+      }
+    }
 
     .smallBtnContainer {
       display: none;
     }
     .imgContainer {
       position: relative;
+      padding: 25px;
       img {
-        width: 95%;
+        width: 85%;
         height: auto;
+        min-width: 350px;
       }
     }
-    .textContainer {
-      line-height: 1.3;
-      margin: auto;
-      text-align: left;
-      color: black;
 
-      h1{
-        font-size: calc((1.1 - 1) * 1.2vw + 3.3rem);
-      }
-      p{
-        font-size: calc((1.1 - 1) * 1.2vw + 1.2rem);
-        max-width: 42ch;
-      }
-    }
     .hero-container {
       position: absolute;
       bottom: -30px;
@@ -189,32 +207,37 @@ export default {
     -webkit-transform: rotate(45deg);
   }
 }
-.btnContainer {
-  position: absolute;
-  margin: auto;
-  bottom: 0 !important;
-  padding: 20px 0;
-  z-index: 5;
-}
-.tryForFreeBtn {
+// .btnContainer {
+//   position: absolute;
+//   margin: auto;
+//   bottom: 0 !important;
+//   padding: 20px 0;
+//   z-index: 5;
+// }
+// .v-btn {
+//   padding: 25px !important;
+// }
+button {
+  box-shadow: 0px 8px 15px rgba(139, 139, 139, 0.2);
   cursor: pointer;
+  border: 1px solid rgba(139, 139, 139, 0.2);
   background-color: white !important;
   border-radius: 50px !important;
-  padding: 25px !important;
+  padding: 16px 20px !important;
   font-weight: bold;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   scroll-behavior: smooth;
 
-  a{
+  a {
     text-decoration: none;
     color: black;
   }
 }
-.tryForFreeBtn:hover {
+button:hover {
   background-color: black !important;
   color: white;
 
-  a{
+  a {
     color: white;
   }
 }
@@ -223,32 +246,42 @@ export default {
     display: none;
   }
   .MainContainer {
-    
-    height: 100vh !important;
- 
+    // height: 100vh !important;
+    .bigImage {
+      display: none;
+    }
+    .smallImage {
+      display: block !important;
+    }
     .content {
       margin: auto;
       padding-top: 100px;
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
       align-items: center;
-      text-align: center;
+
+      div:nth-child(1) {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column !important;
+      }
 
       .smallBtnContainer {
         display: block;
         order: 3;
-
-     
       }
       .imgContainer {
         grid-row: 2;
 
-        img{
-          max-width: 530px;
+        img {
           height: auto;
         }
       }
       .textContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column !important;
         text-align: center !important;
         font-size: calc((1.1 - 1) * 1.2vw + 1.2rem) !important;
       }
@@ -256,35 +289,59 @@ export default {
   }
 }
 
-@media only screen and (max-width: 380px) {
-  .MainContainer {
-    height: 100% !important;
-    .content {
-      display: grid;
-      grid-auto-flow: row;
-      grid-template-columns: none;
-      text-align: center;
-      padding-top: 60px;
+// @media only screen and (max-width: 380px) {
+//   .MainContainer {
+//     height: 100% !important;
+//     .content {
+//       .bigBtnContainer {
+//         display: none;
+//       }
+//       .smallBtnContainer {
+//         display: block;
+//         margin: auto;
+//         grid-row: 3;
+//       }
+//       .imgContainer {
+//         grid-row: 2;
+//       }
+//       .textContainer {
+//         padding-top: 60px;
+//         text-align: center !important;
+//         font-size: calc((1.1 - 1) * 1.2vw + 1.2rem) !important;
+//       }
+//     }
+//   }
+// }
 
-      .bigBtnContainer {
-        display: none;
-      }
-      .smallBtnContainer {
-        display: block;
-        margin: auto;
-        grid-row: 3;
 
-    
-      }
-      .imgContainer {
-        grid-row: 2;
-      }
-      .textContainer {
-        padding-top: 60px;
-        text-align: center !important;
-        font-size: calc((1.1 - 1) * 1.2vw + 1.2rem) !important;
-      }
-    }
-  }
-}
+//     .MainContainer {
+//       @media only screen and (max-width: 1000px) {
+//         .content {
+//           margin: auto;
+//           padding-top: 100px;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: space-between;
+//           align-items: center;
+//         }
+//       }
+
+//       @media only screen and (max-width: 380px) {
+//         .content {
+//           background: chartreuse;
+//           margin: auto;
+//           padding-top: 100px;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: space-between;
+//           align-items: center;
+
+//           div {
+//             padding-bottom: 60px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 </style>

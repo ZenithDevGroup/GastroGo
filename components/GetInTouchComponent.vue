@@ -23,7 +23,7 @@
                 name="message"
                 id=""
                 cols="38"
-                rows="2"
+                rows="10"
                 placeholder="Message"
               ></textarea>
             </div>
@@ -36,7 +36,8 @@
       </div>
       <div class="firstContainer">
         <v-card>
-          <h1>Have any questions? Call Josef now</h1>
+          <h1>Have any questions? </h1> 
+          <h1> Call Josef now</h1>
           <div class="imgContainer">
             <img
               src="~/assets/images/josef.jpg"
@@ -119,7 +120,7 @@
         color: white;
       }
       h1 {
-        padding: 20px;
+        padding: 10px 20px;
       }
 
       .v-icon {
@@ -164,7 +165,7 @@
       .btnContainer {
         width: 100%;
         display: flex;
-        justify-content: right;
+        justify-content: right !important;
         padding: 20px 0;
       }
 
@@ -185,6 +186,21 @@
     }
   }
 }
+ @media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    @media only screen and (max-width: 1000px) {
+    .firstContainer{
+      margin-top: 60px;
+    }
+    }
+     .btnContainer {
+       text-align: right !important;
+
+        button{
+          align-items: right;
+        }
+      }
+  }}
 @media only screen and (max-width: 1000px) {
   .MainContainer {
     height: 100%;
