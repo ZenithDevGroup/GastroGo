@@ -1,5 +1,5 @@
 <template>
-    <v-btn large ><a href="#section5">GET IN TOUCH</a></v-btn>
+   <a href="#section5"> <v-btn large >CONTACT US TO GET STARTED</v-btn></a>
 </template>
 <script>
 export default {

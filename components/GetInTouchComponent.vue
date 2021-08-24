@@ -23,7 +23,7 @@
                 name="message"
                 id=""
                 cols="38"
-                rows="2"
+                rows="5"
                 placeholder="Message"
               ></textarea>
             </div>
