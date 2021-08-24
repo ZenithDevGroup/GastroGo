@@ -43,6 +43,7 @@ export default {
 
     p {
       font-size: 20px;
+       line-height: 1.5;
     }
     .personalInfo {
       padding-top: 40px;
@@ -120,7 +121,7 @@ export default {
 
     p{
       padding: 10px 0;
-      line-height: 1.5;
+      line-height: 1.3;
     }
   }
   .imgContainer {

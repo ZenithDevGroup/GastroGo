@@ -139,7 +139,7 @@ export default {
         align-content: center;
         line-height: 1.3;
         margin: auto;
-        text-align: center !important;
+        text-align: left ;
         color: black;
 
         h1 {
@@ -218,7 +218,7 @@ export default {
 //   padding: 25px !important;
 // }
 button {
-  box-shadow: 0px 8px 15px rgba(139, 139, 139, 0.2);
+  // box-shadow: 0px 8px 15px rgba(139, 139, 139, 0.2);
   cursor: pointer;
   border: 1px solid rgba(139, 139, 139, 0.2);
   background-color: white !important;
