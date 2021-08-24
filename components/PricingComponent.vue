@@ -31,6 +31,7 @@ export default {
             "Utilize our point of sales system",
             "Control your dishes and prices",
             "Table booking",
+            "Free takeaway system"
           ],
           price: "",
         },
@@ -41,7 +42,8 @@ export default {
           priceDescription: [
             "Table and seat management",
             "Send out notifications to followers",
-            "Customized data reports, Events",
+            "Curated data reports",
+            "Events and special offers"
           ],
           price: "599 DKK",
         },
@@ -87,6 +89,7 @@ export default {
     justify-content: center;
 
     .custom-row {
+     
       width: 100% !important;
       height: 100% !important;
       display: grid;
@@ -104,11 +107,20 @@ export default {
       padding-bottom: 60px;
     }
   }
-  .custom-row {
+  .custom-row { 
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-evenly;
+
   }
 }
+ @media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+      .custom-row { 
+    div{
+      padding: 20px;
+    }
+  }
+  }}
 </style>
