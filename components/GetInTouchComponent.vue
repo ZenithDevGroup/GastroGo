@@ -12,15 +12,15 @@
         </div>
 
         <div class="form">
-          <form action="" method="post">
+          <form action="https://gastrogo.us7.list-manage.com/subscribe/post?u=fad4b74bab60983c035d27c68&amp;id=fd6de1d688" method="post">
             <div class="input">
-              <input type="text" name="name" id="name" placeholder="Name" />
+              <input type="text" name="NAME" id="name" placeholder="Name" />
 
-              <input type="email" name="email" id="email" placeholder="Email" />
+              <input type="email" name="EMAIL" id="email" placeholder="Email" />
             </div>
             <div>
               <textarea
-                name="message"
+                name="MESSAGE"
                 id=""
                 cols="38"
                 rows="10"
@@ -29,7 +29,7 @@
             </div>
 
             <div class="btnContainer">
-              <v-btn>Send</v-btn>
+              <v-btn type="submit">Send</v-btn>
             </div>
           </form>
         </div>
