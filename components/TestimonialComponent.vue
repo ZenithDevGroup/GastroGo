@@ -4,13 +4,26 @@
       <div>
         <TitleComponent :title="$t('think')" />
       </div>
-      <carousel perPage="1" :autoplay="true" :loop="true">
-        <slide v-for="(item, i) in $t('comments')" :key="i">
-          <div class="slideContainer" >
-            <CommentComponent :comment="item" :name="owners.name" :src="owners[i].src" />
+      <carousel :perPage=1 :autoplay="true" :loop="true">
+        <slide v-for="(item, i) of $t('comments')" :key="i">
+          <div class="slideContainer">
+            <CommentComponent
+              :comment="item"
+              :name="getOwnerName(i)"
+              :imageUrl="require(`@/assets/images/${getOwnerImage(i)}`)"
+            />
           </div>
         </slide>
       </carousel>
+      <!-- <div v-for="(dataItem, b) of owners" :key="b">
+        {{ getOwnerName(b) }}
+        {{ getOwnerImage(b) }}
+        <CommentComponent
+          :comment="dataItem"
+          :name="owners[b].name"
+          :imageUrl="owners[b].src"
+        />
+      </div> -->
     </div>
   </div>
 </template>
@@ -21,49 +34,35 @@ export default {
     Carousel,
     Slide,
   },
-  data() {
-    return {
-      owners: [
-        {
-          name: "Mads Damgaard",
-          src: "mads",
-        },
-        {
-          name: "Johnny Andersen",
-          src: "johnny2",
-        },
-        {
-          name: "Alexander Olesen",
-          src: "lateP",
-        },
-        {
-          name: "David Blom",
-          src: "david2",
-        },
-      ],
-      // owners: [
-      //   {
-      //     name: "Mads Damgaard",
-      //     position: "Restaurant owner at Pitstop",
-      //     src: "mads",
-      //   },
-      //   {
-      //     name: "Johnny Andersen",
-      //     position: "Restaurant owner at Café Banegården",
-      //     src: "johnny2",
-      //   },
-      //   {
-      //     name: "Alexander Olesen",
-      //     position: "Restaurant owner at Olesen’s Smørrebrød",
-      //     src: "lateP",
-      //   },
-      //   {
-      //     name: "David Blom",
-      //     position: "Restaurant owner at Restaurant Passebækgård",
-      //     src: "david2",
-      //   },
-      // ],
+  data: () => {
+    var owners = {
+      "Mads Damgaard": {
+        src: "mads.png",
+      },
+      "Johnny Andersen": {
+        src: "johnny2.png",
+      },
+      "Alexander Olesen": {
+        src: "lateP.png",
+      },
+      "David Blom": {
+        src: "david2.png",
+      },
     };
+    var data = {
+      owners,
+      getOwnerName:(v)=>{
+        //the key is the owners name so return v;
+        return v;
+      },
+      getOwnerPosition: (v) => {
+        return owners[v]?.position;
+      },
+      getOwnerImage: (v) => {
+        return owners[v]?.src;
+      },
+    };
+    return data;
   },
 };
 </script>
