@@ -2,17 +2,15 @@
   <div class="MainContainer">
     <div class="content">
       <div class="title">
-        <h3> Everything you need</h3>
-        <p>
-         Our partners love us due to all our features included in one system.
-        </p>
+        <h3>{{ $t("everything") }}</h3>
+        <p>{{ $t("partner-love") }}</p>
       </div>
       <div class="customCol">
-        <div v-for="(item, i) in rowComponent" :key="i">
+        <div v-for="(item, i) in $t('rowComponent')" :key="i">
           <CustomRowComponent
             :title="item.title"
             :description="item.description"
-            :imageUrl="item.src"
+            :imageUrl="images[i].src"
           />
         </div>
       </div>
@@ -20,50 +18,32 @@
   </div>
 </template>
 <script>
+
 import aosMixin from "~/mixins/aos";
 export default {
   data() {
     return {
       title: "Features",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.",
-      rowComponent: [
-        {
-          title: "Online Ordering",
-          description:
-            "Let your customers order from your restaurant directly from their smartphone.",
-          src: "order",
+      images: [
+        { 
+          src: "order"
         },
-        {
-          title: "Free Flexibility",
-          description:
-            "Change your menu daliy and much more without any extra cost.",
-          src: "chain",
+        { 
+          src: "chain"
         },
-        {
-          title: "POS",
-          description:
-            "We offer a smart POS system where you can easily change and add items in the system. ",
-          src: "payment-terminal",
+        { 
+          src: "payment-terminal"
         },
-        {
-          title: "Table Booking",
-          description:
-            "Let your customers book at table from your restaurant directly from their smartphone.",
-          src: "booking",
+        { 
+          src: "booking"
         },
-        {
-          title: "Companion app",
-          description: "Accept orders directly on your smartphone.",
-          src: "delivery-box",
+        { 
+          src: "delivery-box"
         },
-        {
-          title: "Accounting overview",
-          description:
-            "Download your data directly from the app",
-          src: "accounting",
-        },
-      ],
+        { 
+          src: "accounting"
+        }
+      ]
     };
   },
   mixins: [aosMixin],
@@ -87,7 +67,7 @@ export default {
       color: rgb(202, 11, 53);
     }
     p {
-         position: relative;
+      position: relative;
       font-size: calc((1.1 - 1) * 1.2vw + 1rem);
       color: rgb(68, 68, 68);
     }

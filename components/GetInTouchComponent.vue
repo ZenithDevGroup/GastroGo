@@ -3,20 +3,19 @@
     <div class="content">
       <div class="secondContainer">
         <div>
-          <h1>Contact Us Today</h1>
+          <h1>{{$t('contact-today')}}</h1>
        
           <p>
-            We will help you with any questions or get you onboard within 24
-            hours.
+           {{ $t('question')}}
           </p>
         </div>
 
         <div class="form">
           <form action="https://gastrogo.us7.list-manage.com/subscribe/post?u=fad4b74bab60983c035d27c68&amp;id=fd6de1d688" method="post">
             <div class="input">
-              <input type="text" name="NAME" id="name" placeholder="Name" />
+              <input type="text" name="NAME" id="name" :placeholder="$t('name')" />
 
-              <input type="email" name="EMAIL" id="email" placeholder="Email" />
+              <input type="email" name="EMAIL" id="email" :placeholder="$t('email')" />
             </div>
             <div>
               <textarea
@@ -24,7 +23,7 @@
                 id=""
                 cols="38"
                 rows="10"
-                placeholder="Message"
+                :placeholder="$t('message')"
               ></textarea>
             </div>
 
@@ -36,15 +35,15 @@
       </div>
       <div class="firstContainer">
         <v-card>
-          <h1>Have any questions? </h1> 
-          <h1> Call Josef now</h1>
+          <h1>{{$t('any')}}</h1> 
+          <h1>{{$t('josef')}}</h1>
           <div class="imgContainer">
             <img
               src="~/assets/images/josef.jpg"
               alt=""
             />
             <div>Josef Jensen</div>
-            <div>Contact person</div>
+            <div>{{$t('person')}}</div>
           </div>
           <div>
             <v-icon>mdi-email</v-icon>

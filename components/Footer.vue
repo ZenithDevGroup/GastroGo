@@ -8,10 +8,10 @@
           <p>GastroGo</p>
         </div>
         <div class="customRow">
-          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/">{{$t('home')}}</NuxtLink>
           <!-- <NuxtLink v-bind:to="section1">About</NuxtLink> -->
           <NuxtLink v-bind:to="section2">Features</NuxtLink>
-          <NuxtLink v-bind:to="section3">Pricing</NuxtLink>
+          <NuxtLink v-bind:to="section3">{{$t('pricing')}}</NuxtLink>
         </div>
         <div class="icons">
           <a href="https://www.instagram.com/gastrogoofficial/ ">

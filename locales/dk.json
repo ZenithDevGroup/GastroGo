@@ -1,0 +1,97 @@
+{
+  "partner": "Bliv partner idag",
+  "become": "Bliv en del af den bedste online bestillingsplatform, GastroGo indenfor 24 timer helt gratis. Tryk på knappen forneden og udfyld formlen.",
+  "try": "PRØV GRATIS",
+  "everything": "Alt du skal bruge",
+  "partner-love": "Vores partnere elsker os fordi vi inkluderer alle vores funktioner i et system.",
+  "rowComponent": [
+    {
+      "title": "Online Bestilling",
+      "description": "Lad dine kunder bestille fra din restaurant direkte fra deres telefon."
+    },
+    {
+      "title": "Gratis Fleksibilitet",
+      "description": "Skift din menu dagligt og meget mere uden meromkostninger."
+    },
+    {
+      "title": "POS",
+      "description": "Vi tilbyder et smart POS system hvor du nemt kan ændre og tilføje ting til systemet."
+    },
+    {
+      "title": "Bordbooking",
+      "description": "Lad dine kunder booke et bord på din restaurant direkte fra deres telefon."
+    },
+    {
+      "title": "Companion App",
+      "description": "Accepter ordre direkte fra din telefon."
+    },
+    {
+      "title": "Regnskabs Overblik",
+      "description": "Download din data direkte fra appen"
+    }
+  ],
+
+  "freedom": "Frihed og Fleksibilitet",
+  "user-focused": "Med vores partner app kan du nemt styre din restaurants brugercentrerede display.",
+  "completely-free": "GastroGo er helt gratis – Men hvordan?",
+  "freemium": "GastroGo er en freemium løsning. Det er helt gratis for restauratører og brugere at bruge – 0 kr i oprettelsesgebyr, 0 kr i kommission, og 0kr i andre gebyrer. Mens grundpakken af GastroGo altid vil være gratis, så tilbyder vi også et premium abonnement for restauratørerne som tilbyder en række ekstra features, som specifik data indsigt, muligheden for at sende push notifikationer til følgere, bord administration og loyalitetsprogrammer.",
+  "contact": "Kontakt og oprettelse",
+  "think": "Det siger vores partnere",
+  "comments": {
+    "digital-sales": "For en restauration som vores, så tillader GastroGo os at sælge mad online. Vores udgifter til råvarer er så høje, at kommissionerne for de andre platforme ødelægger vores forretningsmodel. Når der er travlt og restauranten er fuld, så kan et enkelt take-away opkald vælte servicen. GastroGo fungerer som vores digitale sekretær, så vi kan fortsætte med at sælge take-away, selv med en yldt restaurant.",
+    "choose": "Da vi blev bedt om enten at gå over til takeaway eller lukke prøvede jeg at se om der var nogle på markedet som passede godt med min restaurant, men jeg fandt hurtigt ud af at de eksisterende takeaway platforme var utroligt dyre og ufleksible. Derfor bruger jeg nu GastroGo, jeg kunne rigtig godt lide princippet med at man ikke er tvunget til at betale og samtidig har fuld kontrol over ens menuer, åbningstider osv., at man derimod har muligheden for at opgradere sit abonnement til det man har brug for, passer mig rigtig godt. Og det er ikke ligesom med mange af de andre hvor det kun er &quot;gratis&quot; hvis man har købt 23 andre produkter og ellers er det super dyrt. Jeg syntes i hvert fald det giver god mening.",
+    "vision": "Først og fremmest syntes vi at visionen for GastroGo giver rigtig god mening. Det er en måde for os at effektivisere vores forretning på. Vi bruger så utroligt meget tid af vores dagligdag på at tage telefonen og skrive ting ned i hånden og mine kunder ser mig stresse over at telefonen ringer konstant. Vi sælger rigtig meget mad, og teknologien vil tillade os at bruge vores tid på vores kunder og vores mad. Det er også fedt at GastroGo er lokalt. Teknologi og apps hører storbyen og udlandet til, og det er fedt at nogle lokale har besluttet sig for at lave et bedre alternativ.",
+    "happy": "Jeg er glad for at indgået en aftale med GastroGo, da deres kundeservice er den bedste jeg nogensinde har oplevet. Her er ikke nogen problemer men kun løsninger, tak til GastroGo for en fed og nem app til vores virksomhed."
+  },
+
+  "find": "Find den plan som passer bedst til dig",
+  "items": [
+    {
+      "title": "Grundpakken",
+      "titleDescription": "Gratis nu og for evigt",
+      "priceDescription": [
+        "Udnyt vores point of sales system",
+        "Kontroller dine retter og priser",
+        "Bordbooking",
+        "Gratis takeaway system"
+      ],
+      "price": ""
+    },
+    {
+      "title": "Plus",
+      "titleDescription": "Kommer snart",
+      "priceDescription": [
+        "Bord- og sædestyring",
+        "Push notifikationer til følgere",
+        "Specifikke data rapporter",
+        "Events og specielle tilbud"
+      ],
+      "price": "599 DKK"
+    },
+    {
+      "title": "Pro",
+      "titleDescription": "Kommer snart",
+      "priceDescription": [
+        "Loyalitetsprogram",
+        "24 timers support",
+        "Køkken display support",
+        "Regnskabs integration"
+      ],
+      "price": "1299 DKK"
+    }
+  ],
+
+  "getintouch": "Abonner",
+  "contact-today": "Kontak os i dag",
+  "question": "Vi hjælper dig med alle dine spørgsmål eller får dig onboarded indenfor 24 timer.",
+  "name": "Navn",
+  "email": "Email",
+  "message": "Besked",
+  "any": "Har du nogle spørgsmål?",
+  "josef": "Ring til Josef nu.",
+  "person": "Kontakt person",
+  "send": "Send",
+  "home": "Hjem",
+  "pricing": "Pris",
+  "features": "Features"
+}

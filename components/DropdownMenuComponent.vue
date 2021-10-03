@@ -5,11 +5,11 @@
        <div style="width: 100%; text-align:right;padding-right: 10%;top:0">
           <v-icon dark large >mdi-close</v-icon>
        </div>
-        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/">{{$t('home')}}</NuxtLink>
         <!-- <NuxtLink to="#section2">About</NuxtLink> -->
         <NuxtLink to="#section2">Features</NuxtLink>
-        <NuxtLink to="#section3">Pricing</NuxtLink>
-        <NuxtLink to="#section5">Get In Touch</NuxtLink>
+        <NuxtLink to="#section3">{{$t('pricing')}}</NuxtLink>
+        <NuxtLink to="#section5">{{$t('getintouch')}}</NuxtLink>
       </ul>
     </div>
   </div>

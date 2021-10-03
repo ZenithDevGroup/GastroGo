@@ -1,0 +1,95 @@
+{
+  "partner": "Be a Partner Today",
+  "become": "Become a part of the best online order platform GastroGo within 24 hours for FREE. Press the button below and fill out the form.",
+  "try": "TRY FOR FREE",
+  "everything": "Everything you need",
+  "partner-love": "Our partners love us due to all our features included in one system.",
+  "rowComponent": [
+    {
+      "title": "Online Ordering",
+      "description": "Let your customers order from your restaurant directly from their smartphone."
+    },
+    {
+      "title": "Free Flexibility",
+      "description": "Change your menu daily and much more without any extra cost."
+    },
+    {
+      "title": "POS",
+      "description": "We offer a smart POS system where you can easily change and add items in the system."
+    },
+    {
+      "title": "Table Booking",
+      "description": "Let your customers book a table from your restaurant directly from their smartphone."
+    },
+    {
+      "title": "Companion App",
+      "description": "Accept orders directy on your smartphone."
+    },
+    {
+      "title": "Accounting Overview",
+      "description": "Download your data directly from the app."
+    }
+  ],
+  "freedom": "Freedom and Flexibility",
+  "user-focused": "With our partner app, you can easily manage your restaurants presence on the user-focused GastroGo application. In this app, you can change the opening hours of your restaurant, manage your meny and your pricing, hide menu items for sold out dishes, control what images the users sees, and much more.",
+  "completely-free": "GastroGo is completely free - but how?",
+  "freemium": "GastroGo is a freemium solution. It's completely free for restaurateurs and users alike - 0 DKK in setup fees, 0 DKK in commission, and 0 DKK in other fees and charges. While the core package of GastroGo will always be free, we will offer a premium subscription for restaurants that will give you a suite of extra features, such as curated data insights, sending push notifications to followers, table booking and loyalty programs.",
+  "contact": "Contact Us To Get Started",
+  "think": "What others think about us",
+  "comments": {
+    "digital-sales": "For a restaurant like ours, GastroGo makes digital sales possible for a business like mine. Our produce expenses are simply too high to be profitable with the commissions that the other platforms charge. When the heat is on and the restaurant is full, a phone call can tip the balance between service and a bad one. GastroGo is our digital secretary and allows us to stay open for take-away business, even with a full restaurant.a good service and a bad one. GastroGo is our digital secretary and allows us to stay open for take-away business, even with a full restaurant.",
+    "choose": "When we had to choose between takeaway or no service at all, I  started to look for good fits between the solutions and my restaurant, but I  quickly discovered that the solutions were expensive and inflexible in general. That is why I am now using GastroGo. I really liked the principle of it being free while granting me the full control of my own menus and opening hours, etc. And GastroGo isn&#39;t just &quot;FREE&quot;, if you buy 23 other products first and otherwise being super expensive like I&#39;ve seen with some other similar product. It makes a lot of sense to me.",
+    "vision": "First, the vision of GastroGo is really sound. It&#39;s a way for us to become more effective in our business. We’re using so much time every day answering the phone and writing things down by hand, and my customers can see that it's stressful with the phone constantly calling. We sell a lot of food and this technology allows us to spend our time with our customers and our food. It’s also nice that GastroGo is local. Technology and apps are for the big cities and foreign countries, so it’s awesome that some locals have decided to create a better alternative.",
+    "happy": "Becoming a partner of GastroGo has made me happy, since their customer service is the best, I have ever experienced. There are no problems, just solutions. Thank you GastroGo for an awesome and easy to use app for our restaurant."
+  },
+  "find": "Find a plan that's right for you",
+  "items": [
+    {
+      "title": "Basic",
+      "titleDescription": "FREE now and forever",
+      "priceDescription": [
+        "Utilize our point of sales systems",
+        "Control your dishes and prices",
+        "Table booking",
+        "Free takeaway system"
+      ],
+      "price": ""
+    },
+    {
+      "title": "Plus",
+      "titleDescription": "Coming Soon",
+      "priceDescription": [
+        "Table and seat management",
+        "Send out notifications to followers",
+        "Curated data reports",
+        "Events and special offers"
+      ],
+      "price": "599 DKK"
+    },
+    {
+      "title": "Pro",
+      "titleDescription": "Coming Soon",
+      "priceDescription": [
+        "Loyalty",
+        "24 hours support",
+        "Kitchen display support",
+        "Accounting Integration"
+      ],
+      "price": "1299 DKK"
+    }
+  ],
+
+  "getintouch": "Get in touch",
+  "contact-today": "Contact Us Today",
+  "question": "We will help you with any questions or get you onboard within 24 hours.",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "any": "Have any question?",
+  "josef": "Call Josef now.",
+  "person": "Contact person",
+  "send": "Send",
+  "home": "Home",
+  "pricing": "Pricing",
+  "features": "Features"
+}

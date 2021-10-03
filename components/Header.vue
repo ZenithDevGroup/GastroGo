@@ -9,20 +9,21 @@
       </div>
       <div>
         <ul class="NavEntries">
-          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/">{{$t('home')}}</NuxtLink>
           <NuxtLink v-bind:to="section2" v-on:click.native="isActiveFunc"
             >Features
           </NuxtLink>
-          <NuxtLink v-bind:to="section3">Pricing</NuxtLink>
+          <NuxtLink v-bind:to="section3" >{{$t('pricing')}}</NuxtLink>
         </ul>
       </div>
       <div class="buttonContainer">  
         <ButtonComponent id="btn" />
+        <LocaleSwitcher />
         <!-- <div class="v2dropdown">
           <v-icon class="dropicon">mdi-google-earth</v-icon>
           <div class="v2dropdown-content">
-            <a href="#"> English</a>
-            <a href="#">Dansk</a>
+            <a @click="selectLang('en')">English</a>
+            <a @click="selectLang('dk')">Dansk</a>
           </div>
         </div> -->
       
@@ -80,6 +81,13 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
+    selectLang(lang){
+      if(lang == 'en'){
+        return en;
+      }
+      return dk;
+    },
+
     toggleMenu() {
       this.toggleNav = !this.toggleNav;
     },
