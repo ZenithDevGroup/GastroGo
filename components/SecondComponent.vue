@@ -22,6 +22,7 @@
 .MainContainer {
   display: flex;
   height: 100vh;
+  position: relative;
   justify-content: center;
   background-color: rgb(247, 121, 104);
   .content {
