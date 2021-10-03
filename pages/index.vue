@@ -1,7 +1,6 @@
 <template>
   <div class="MainContainer">
     <div class="content">
-     
       <FirstComponent id="section1" ref="section1" />
      <ThirdComponent id="section2" ref="section2" />
       <FourthComponent />

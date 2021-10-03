@@ -2,7 +2,7 @@
   <div class="MainContainer">
     <div class="content">
       <div>
-        <h1>Find a plan that's right for you.</h1>
+        <h1>{{ $t("find") }}</h1>
       </div>
       <div class="custom-row">
         <CardComponent
@@ -89,7 +89,6 @@ export default {
     justify-content: center;
 
     .custom-row {
-     
       width: 100% !important;
       height: 100% !important;
       display: grid;
@@ -107,20 +106,20 @@ export default {
       padding-bottom: 60px;
     }
   }
-  .custom-row { 
+  .custom-row {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-evenly;
-
   }
 }
- @media not all and (min-resolution: 0.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
-      .custom-row { 
-    div{
-      padding: 20px;
+    .custom-row {
+      div {
+        padding: 20px;
+      }
     }
   }
-  }}
+}
 </style>

@@ -1,15 +1,10 @@
 <template>
   <div class="MainContainer">
-    <div></div>
     <div class="content">
       <div class="description">
-        <h1>Freedom and Flexibility</h1>
+        <h1>{{ $t('freedom')}}</h1>
         <p>
-          With our Android app, you can easily manage your restaurants presence
-          on the user-focused GastroGo application. In this app, you can change
-          the opening hours of your restaurant, manage your menu and your
-          pricing, hide menu items for sold out dishes, control what images the
-          users sees, and much more.
+          {{ $t('user-focused')}}
         </p>
       </div>
       <div class="carousel">
@@ -33,6 +28,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
+@import url('../assets/styles.css');
 .MainContainer {
   
   display: flex;
@@ -45,7 +42,7 @@ export default {
     display: grid;
     justify-content: space-around;
     grid-template-columns: 1fr 1fr;
-    // grid-gap: 60px;
+    grid-gap: 60px;
 
     .description {
       text-align: left;

@@ -1,6 +1,6 @@
 <template>
   <div class="MainContainer">
-    <v-card :loading="loading" class="mainCard customCol" elevation="0">
+    <v-card class="mainCard customCol" elevation="0">
       <template slot="progress">
         <v-progress-linear
           color="deep-purple"
@@ -25,11 +25,10 @@
           v-for="(item, i) in priceDescription"
           v-bind:key="i"
           :iconDescription="item"
-          :num="num"
         />
       </div>
       <v-btn x-large elevation="0" text
-        ><a href="#section5">GET IN TOUCH</a></v-btn
+        ><a href="#section5">{{ $t('getintouch')}}</a></v-btn
       >
     </v-card>
   </div>

@@ -1,9 +1,8 @@
 <template>
   <div
     class="customCard"
-    
   >
-    <div class="imgContainer">
+    <div class="imgContainer" > 
       <img :src="require('~/assets/feature-icons/'+ imageUrl + '.png')" alt="" />
     </div>
     <div>
@@ -21,8 +20,6 @@ import aosMixin from "~/mixins/aos";
 export default {
   props: ['title', 'description', 'imageUrl'],
   mixins: [aosMixin],
-
-
 };
 </script>
 <style lang="scss" scoped>

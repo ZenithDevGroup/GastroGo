@@ -1,5 +1,5 @@
 <template>
-   <a href="#section5"> <v-btn large >CONTACT US TO GET STARTED</v-btn></a>
+   <a href="#section5"> <v-btn large >{{ $t('contact')}}</v-btn></a>
 </template>
 <script>
 export default {
@@ -14,9 +14,9 @@ export default {
     border-radius: 30px;
     margin: 20px 0; 
 
-    a{
-      text-decoration: none;
+   
+  } a{
+      text-decoration: none !important;
       color: white;
     }
-  }
 </style>

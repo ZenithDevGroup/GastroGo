@@ -2,15 +2,9 @@
   <div class="MainContainer">
     <div class="content">
       <div>
-        <h1>GastroGo is completely free - but how?</h1>
+        <h1>{{ $t('completely-free')}}</h1>
         <p>
-          GastroGo is a freemium solution. It's completely free for
-          restaurateurs and users alike - 0 DKK in setup fees, 0 DKK in
-          commission, and 0 DKK in other fees and charges. While the core
-          package of GastroGo will always be free, we will offer a premium
-          subscription for restaurants that will give you a suite of extra
-          features, such as curated data insights, sending push notifications to
-          followers, table booking and loyalty programs.
+          {{ $t('freemium')}}
         </p>
         <ButtonComponent />
       </div>

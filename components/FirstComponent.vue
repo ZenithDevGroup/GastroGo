@@ -4,11 +4,8 @@
     <div class="content">
       <div>
         <div class="textContainer">
-          <h1>BE A PARTNER TODAY</h1>
-          <p>
-            Become a part of the best online order platform GastroGo within 24
-            hours for FREE. Press the button below and fill out the form.
-          </p>
+          <h1>{{ $t('partner') }}</h1>
+          <p>{{ $t('become')}}</p>
         </div>
         <div class="imgContainer bigImage">
           <img src="~/assets/hero-images/newdevices.png" alt="" />
@@ -18,10 +15,7 @@
         <img src="~/assets/hero-images/newdevices.png" alt="" />
       </div>
       <div>
-        <!-- <v-btn class="tryForFreeBtn"
-          ><a href="#section5">Try for free</a></v-btn
-        > -->
-        <button><a href="#section5">TRY FOR FREE</a></button>
+        <button><a href="#section5">{{ $t('try')}}</a></button>
       </div>
     </div>
     <div class="hero-container">
@@ -65,6 +59,7 @@ export default {
   components: {
     typical,
   },
+
 };
 </script>
 <style lang="scss" scoped>
